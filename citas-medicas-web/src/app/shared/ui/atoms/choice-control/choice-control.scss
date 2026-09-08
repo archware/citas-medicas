@@ -1,0 +1,79 @@
+:host {
+  display: inline-flex;
+  min-width: 0;
+}
+
+.choice {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.choice__native {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.choice__indicator {
+  box-sizing: border-box;
+  width: 1.125rem;
+  height: 1.125rem;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-sm);
+  background: var(--input-bg);
+  box-shadow: var(--input-shadow);
+}
+
+.choice__native[type='radio'] + .choice__indicator {
+  border-radius: var(--radius-full);
+}
+
+.choice__native:checked + .choice__indicator {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+}
+
+.choice__native:checked + .choice__indicator::after {
+  width: 0.5rem;
+  height: 0.25rem;
+  border-bottom: 2px solid var(--text-color-on-primary);
+  border-left: 2px solid var(--text-color-on-primary);
+  content: '';
+  transform: translateY(-0.0625rem) rotate(-45deg);
+}
+
+.choice__native[type='radio']:checked + .choice__indicator::after {
+  width: 0.45rem;
+  height: 0.45rem;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--text-color-on-primary);
+  transform: none;
+}
+
+.choice__native:focus-visible + .choice__indicator {
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-shadow-focus);
+}
+
+/* Ver form-input/input.scss: el token ya declara un contraste verificado por
+   tema y la opacidad lo bajaba a la mitad. */
+.choice--disabled {
+  color: var(--input-disabled-text);
+  cursor: not-allowed;
+}
+
+.choice__label {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}

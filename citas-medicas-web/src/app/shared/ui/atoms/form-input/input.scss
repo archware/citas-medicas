@@ -1,0 +1,105 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.field__label {
+  color: var(--text-color);
+  font-size: var(--text-sm);
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.field__required {
+  color: var(--danger-color);
+}
+
+.field__control {
+  position: relative;
+  min-width: 0;
+}
+
+.field__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: var(--control-height);
+  min-height: var(--control-height);
+  padding: 0 var(--space-4);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  background: var(--input-bg);
+  box-shadow: var(--input-shadow);
+  color: var(--input-text);
+  font: inherit;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.field__input:hover:not(:disabled):not(:focus) {
+  border-color: var(--input-border-hover);
+  box-shadow: var(--input-shadow-hover);
+}
+
+.field__input:focus,
+.field__input:focus-visible {
+  border-color: var(--input-border-focus);
+  box-shadow: var(--input-shadow-focus);
+  outline: none;
+}
+
+/* Sin `opacity`: atenuaba texto y fondo a la vez contra la página, de modo que
+   el contraste ya no era el que declaran los tokens. Con los tokens corregidos
+   y opacity 0.7 el resultado seguía en 4.09:1; sin ella son 6.99:1.
+   WCAG 1.4.3 exime a los controles inactivos del 4.5:1, así que esto no es un
+   incumplimiento formal: es legibilidad, y un campo que no se lee es un defecto
+   igual. Se sostiene 4.5:1 como listón propio. El estado deshabilitado lo
+   comunican los tokens y el cursor, no una transparencia que falsea lo
+   calculado. */
+.field__input:disabled {
+  background: var(--input-disabled-bg);
+  color: var(--input-disabled-text);
+  cursor: not-allowed;
+}
+
+.field--error .field__input {
+  border-color: var(--danger-color);
+}
+
+.field__reveal {
+  position: absolute;
+  top: 50%;
+  right: var(--space-2);
+  min-width: 4.25rem;
+  min-height: 2rem;
+  padding: 0 var(--space-2);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+}
+
+.field__control:has(.field__reveal) .field__input {
+  padding-right: 5.25rem;
+}
+
+.field__message {
+  color: var(--text-color-muted);
+  font-size: var(--text-xs);
+}
+
+.field__message--error {
+  color: var(--danger-color);
+}

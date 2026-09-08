@@ -1,0 +1,77 @@
+# CI del POS de tienda (Azure DevOps).
+#
+# Valida cada push a master con el MISMO gate local (`npm run check`):
+#   1. check:atomic — procedencia de shared/ui contra -Atomic-UI (política 1.2.2):
+#      requiere el repo ADN clonado al lado. Se clona de GitHub SIN credenciales
+#      (github.com/archware/-Atomic-UI es de lectura pública); si algún día pasa a
+#      privado, basta definir la variable de pipeline ATOMIC_PAT y se usará. Si el
+#      clon falla, el gate NO corre y el pipeline lo dice a gritos (warning), pero
+#      tests y build corren igual.
+#   2. Tests unitarios (vitest, una sola corrida).
+#   3. Build de producción de Angular.
+#
+# VALIDACIÓN DE PRs: en Azure Repos Git los triggers `pr:` del YAML se IGNORAN.
+# Para correr esto ANTES del merge: Repos → Branches → master → Branch policies
+# → Build Validation → este pipeline.
+
+trigger:
+  branches:
+    include:
+      - master
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  npm_config_cache: $(Pipeline.Workspace)/.npm
+
+steps:
+  - task: NodeTool@0
+    displayName: Node 24
+    inputs:
+      versionSpec: 24.x
+
+  - task: Cache@2
+    displayName: Cache de npm
+    inputs:
+      key: 'npm | "$(Agent.OS)" | package-lock.json'
+      path: $(npm_config_cache)
+
+  - script: npm ci
+    displayName: npm ci (lockfile exacto)
+
+  - script: |
+      set -u
+      # El ADN es de lectura pública: no hace falta secreto. ATOMIC_PAT solo se
+      # usa si está definido (por si el repo pasa a privado); si la variable no
+      # existe, Azure deja el literal "$(ATOMIC_PAT)" sin expandir y hay que
+      # descartarlo, o el clon iría con un usuario inventado.
+      PAT="${ATOMIC_PAT:-}"
+      case "$PAT" in *'$('*) PAT="" ;; esac
+      if [ -n "$PAT" ]; then
+        URL="https://${PAT}@github.com/archware/-Atomic-UI.git"
+      else
+        URL="https://github.com/archware/-Atomic-UI.git"
+      fi
+      if git clone --quiet "$URL" "$(Pipeline.Workspace)/-Atomic-UI"; then
+        echo "##vso[task.setvariable variable=ATOMIC_UI_ROOT]$(Pipeline.Workspace)/-Atomic-UI"
+      else
+        echo "##vso[task.logissue type=warning]No se pudo clonar -Atomic-UI: el gate de procedencia NO va a correr."
+      fi
+    displayName: Clonar el ADN (-Atomic-UI)
+    env:
+      ATOMIC_PAT: $(ATOMIC_PAT)
+
+  - script: |
+      if [ -n "$ATOMIC_UI_ROOT" ]; then
+        npm run check:atomic
+      else
+        echo "Gate de procedencia OMITIDO (no se pudo clonar el ADN)."
+      fi
+    displayName: Gate de procedencia Atomic (política 1.2.2)
+
+  - script: npm test -- --watch=false
+    displayName: Tests unitarios (vitest)
+
+  - script: npm run build
+    displayName: Build de producción

@@ -1,0 +1,30 @@
+<app-crud-dialog
+  #dialog
+  [size]="size()"
+  [panelClass]="panelClass()"
+  [labelledBy]="titleId()"
+  [describedBy]="description() ? descriptionId() : null"
+  (cancelled)="handleCancelled($event)"
+  (closed)="handleClosed()"
+>
+  <article class="form-dialog" [attr.aria-busy]="busy()">
+    <header class="form-dialog__header">
+      <div class="form-dialog__heading">
+        @if (eyebrow()) {
+          <p class="form-dialog__eyebrow">{{ eyebrow() }}</p>
+        }
+        <h2 class="form-dialog__title" [id]="titleId()">{{ title() }}</h2>
+        @if (description()) {
+          <p class="form-dialog__description" [id]="descriptionId()">{{ description() }}</p>
+        }
+      </div>
+      <div class="form-dialog__close">
+        <ng-content select="[dialog-close]" />
+      </div>
+    </header>
+
+    <div class="form-dialog__body">
+      <ng-content />
+    </div>
+  </article>
+</app-crud-dialog>

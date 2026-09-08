@@ -1,0 +1,9 @@
+:host {
+  display: block;
+  min-width: 0;
+}
+
+.explicacion {
+  margin: var(--space-2) 0 0;
+  color: var(--text-color-secondary);
+}

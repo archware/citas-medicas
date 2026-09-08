@@ -1,0 +1,1726 @@
+{
+  "descripcion": "Deuda Atomic congelada por CORE-GATES-20260824-01. Solo puede encoger. Una entrada nueva exige una decision escrita, no una regeneracion.",
+  "generadoPor": "governance/consumer/check-atomic-rules.mjs --update-baseline",
+  "entradas": [
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/avatar/avatar.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/avatar/avatar.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/badge/badge.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/breadcrumb/breadcrumb.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/button/button.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/checkbox/checkbox.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/chip/chip.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/divider/divider.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/file-input/file-input.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/form-error/form-error.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/form-row/form-row.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/form-row/form-row.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/form-row/form-row.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/icon-button/icon-button.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/input/input.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/language-switcher/language-switcher.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/loader/loader.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/number-input/number-input.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/progress/progress.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/progress/progress.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/rating/rating.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/row/row.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/row/row.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/row/row.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/select/select.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/spinner/spinner.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/status-badge/status-badge.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/table/table-cell.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/table/table-head.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/table/table-header-cell.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/table/table-row.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/table/table.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/textarea/textarea.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/toggle/toggle.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/atoms/version/version.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/action-group/action-group.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/avatar-group/avatar-group.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/avatar-group/avatar-group.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "binding de estilo en host; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/data-state/data-state.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/dropdown/dropdown.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/kpi-card/kpi-card.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/modal/modal-container.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/modal/modal.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/popup/popup-container.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "HostBinding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "HostBinding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/tag-input/tag-input.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/timeline/timeline.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/toast/toast.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/chart/chart.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/chart/chart.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-pager/data-pager.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/footer/footer.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/navbar/navbar.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/organisms/theme-switcher/theme-switcher.component.ts",
+      "detalle": "metadato Component.styles; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "estilos-externos",
+      "archivo": "src/app/shared/ui/templates/layout-shell/layout-shell.component.html",
+      "detalle": "binding de estilo; la presentacion vive en una hoja externa"
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/atoms/choice-control/choice-control.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/atoms/form-input/input.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/atoms/form-select/select.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/atoms/table-action/table-action.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/atoms/toggle/toggle.component.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/molecules/action-group/action-group.component.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/molecules/alert/alert.component.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/crud-dialog/crud-dialog.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/form-dialog/form-dialog.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/form-dialog/form-dialog.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/page-header/page-header.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/query-toolbar/query-toolbar.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "selectores",
+      "archivo": "src/app/shared/ui/organisms/receipt-panel/receipt-panel.ts",
+      "detalle": "el alias prest-* no está en la excepción transitoria."
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/avatar/avatar.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/badge/badge.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/breadcrumb/breadcrumb.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/button/button.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/button/button.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/button/button.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/checkbox/checkbox.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/chip/chip.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/chip/chip.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/chip/chip.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/divider/divider.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/file-input/file-input.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/file-input/file-input.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/file-input/file-input.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/form-error/form-error.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/form-row/form-row.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/icon-button/icon-button.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/icon-button/icon-button.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/icon-button/icon-button.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/input/input.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/loader/loader.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/number-input/number-input.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/number-input/number-input.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/number-input/number-input.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/progress/progress.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/rating/rating.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/rating/rating.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/rating/rating.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/row/row.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/select/select.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/skeleton/skeleton.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/spinner/spinner.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/status-badge/status-badge.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table-cell.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table-header-cell.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table-header-cell.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table-header-cell.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table-row.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/table/table.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/textarea/textarea.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/toggle/toggle.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/atoms/version/version.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/directives/permission.directive.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/action-group/action-group.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/action-group/action-group.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/action-group/action-group.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/avatar-group/avatar-group.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/data-state/data-state.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/dropdown/dropdown.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/dropdown/dropdown.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/dropdown/dropdown.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/kpi-card/kpi-card.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/modal/modal.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/modal/modal.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/modal/modal.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/table-actions/table-actions.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/table-actions/table-actions.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/tag-input/tag-input.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/tag-input/tag-input.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/tag-input/tag-input.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/timeline/timeline.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/chart/chart.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/data-pager/data-pager.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/data-pager/data-pager.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/data-pager/data-pager.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/footer/footer.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/metrics-grid/metrics-grid.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/navbar/navbar.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/navbar/navbar.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/navbar/navbar.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/scroll-overlay/scroll-overlay.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/templates/layout-shell/layout-shell.component.ts",
+      "detalle": "importa EventEmitter; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/templates/layout-shell/layout-shell.component.ts",
+      "detalle": "importa Input; use input() y output()"
+    },
+    {
+      "regla": "signals",
+      "archivo": "src/app/shared/ui/templates/layout-shell/layout-shell.component.ts",
+      "detalle": "importa Output; use input() y output()"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/features/auth/activar-mfa/activar-mfa.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/features/auth/login/login.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/avatar/avatar.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/badge/badge.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/breadcrumb/breadcrumb.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/chip/chip.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/divider/divider.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/file-input/file-input.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/floating-input/floating-input.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/form-input/input.scss",
+      "detalle": "font-weight: 650 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/form-input/input.scss",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/form-select/select.scss",
+      "detalle": "font-weight: 650 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/icon-button/icon-button.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/input/input.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/language-switcher/language-switcher.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/language-switcher/language-switcher.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/language-switcher/language-switcher.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/progress/progress.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/radio/radio.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/rating/rating.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/status-badge/status-badge.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "font-weight: 400 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/text/text.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/version/version.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/version/version.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/atoms/version/version.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/avatar-group/avatar-group.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/card/card.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/combobox/combobox.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/data-state/data-state.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/data-state/data-state.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/datepicker/datepicker.component.css",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/dropdown/dropdown.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/kpi-card/kpi-card.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/kpi-card/kpi-card.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/kpi-card/kpi-card.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/modal/modal-container.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/modal/modal-container.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/modal/modal.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/pagination/pagination.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/popup/popup-container.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/popup/popup-container.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/select2/select2.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/timeline/timeline.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/timeline/timeline.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/molecules/user-menu/user-menu.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "font-weight: 400 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/accordion/accordion.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-pager/data-pager.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/data-table/data-table.scss",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/denomination-counter/denomination-counter.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/filters/filters.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/footer/footer.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/footer/footer.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/footer/footer.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/form-dialog/form-dialog.scss",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/page-header/page-header.scss",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.scss",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.scss",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/print-document-panel/print-document-panel.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/receipt-panel/receipt-panel.scss",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/receipt-panel/receipt-panel.scss",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/sidebar/sidebar.component.css",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/stepper/stepper.component.ts",
+      "detalle": "font-weight: 800 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/tabs/tabs.component.ts",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/organisms/topbar/topbar.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.css",
+      "detalle": "font-weight: 400 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.css",
+      "detalle": "font-weight: 600 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/app/shared/ui/surfaces/panel/panel.component.css",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/styles/themes/_buttons.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/styles/themes/_buttons.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/styles/themes/_forms.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/styles/themes/_tokens-components.css",
+      "detalle": "font-weight: 700 escrito a mano"
+    },
+    {
+      "regla": "tipografia",
+      "archivo": "src/styles/themes/_utilities.css",
+      "detalle": "font-weight: 500 escrito a mano (sin destino en la escala)"
+    },
+    {
+      "regla": "valores-css",
+      "archivo": "src/app/shared/ui/styles/tokens/table-tokens.css",
+      "detalle": "contiene -var( (use calc(-1 * var(...)) para negar tokens)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<section
+  class="query-toolbar query-toolbar--{{ density() }} query-toolbar--{{ layout() }}"
+  role="group"
+  [attr.aria-label]="accessibleLabel()"
+>
+  <div class="query-toolbar__filters">
+    <ng-content select="[query-filters]" />
+  </div>
+  <div class="query-toolbar__actions">
+    <ng-content select="[query-actions]" />
+  </div>
+</section>

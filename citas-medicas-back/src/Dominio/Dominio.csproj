@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Dominio puro: sin MediatR, sin ASP.NET, sin EF, sin infraestructura. -->
+  <PropertyGroup>
+    <RootNamespace>Dominio</RootNamespace>
+  </PropertyGroup>
+</Project>

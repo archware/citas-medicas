@@ -1,0 +1,55 @@
+:host {
+  display: contents;
+}
+
+.crud-dialog {
+  width: min(calc(100% - var(--space-6)), var(--crud-dialog-current-max-width));
+  max-width: var(--crud-dialog-current-max-width);
+  max-height: var(--crud-dialog-max-height);
+  padding: var(--crud-dialog-padding);
+  overflow: hidden;
+  border: 1px solid var(--modal-border);
+  border-radius: var(--radius-lg);
+  background: var(--modal-bg);
+  color: var(--text-color);
+  box-shadow: var(--modal-shadow);
+}
+
+.crud-dialog__viewport {
+  display: block;
+  max-width: 100%;
+  max-height: var(--crud-dialog-max-height);
+}
+
+.crud-dialog__surface {
+  max-width: 100%;
+  max-height: var(--crud-dialog-max-height);
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+}
+
+.crud-dialog--sm {
+  --crud-dialog-current-max-width: var(--crud-dialog-max-width-sm);
+}
+.crud-dialog--md {
+  --crud-dialog-current-max-width: var(--crud-dialog-max-width-md);
+}
+.crud-dialog--lg {
+  --crud-dialog-current-max-width: var(--crud-dialog-max-width-lg);
+}
+.crud-dialog--xl {
+  --crud-dialog-current-max-width: var(--crud-dialog-max-width-xl);
+}
+
+.crud-dialog::backdrop {
+  background: var(--modal-overlay);
+  backdrop-filter: blur(var(--space-1));
+}
+
+@media (max-width: 36rem) {
+  .crud-dialog {
+    width: calc(100% - var(--space-4));
+    max-height: calc(100dvh - var(--space-4));
+  }
+}

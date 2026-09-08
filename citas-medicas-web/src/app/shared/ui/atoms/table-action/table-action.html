@@ -1,0 +1,16 @@
+<button
+  type="button"
+  [class]="toneClass()"
+  [disabled]="disabled() || loading()"
+  [title]="label()"
+  [attr.aria-label]="label()"
+  [attr.aria-busy]="loading()"
+  [attr.aria-pressed]="selected()"
+  (click)="onClick($event)"
+>
+  @if (loading()) {
+    <span class="table-action__spinner" aria-hidden="true"></span>
+  } @else {
+    <i [class]="renderedIconClasses()" aria-hidden="true"></i>
+  }
+</button>

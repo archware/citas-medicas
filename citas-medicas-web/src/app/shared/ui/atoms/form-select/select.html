@@ -1,0 +1,50 @@
+<div class="field" [class.field--error]="error()">
+  @if (label()) {
+    <label class="field__label" [for]="id()">
+      {{ label() }}
+      @if (required()) {
+        <span class="field__required" aria-hidden="true">*</span>
+      }
+    </label>
+  }
+  <div class="field__control">
+    <select
+      class="field__select"
+      [id]="id()"
+      [disabled]="effectiveDisabled()"
+      [required]="required()"
+      [attr.aria-label]="ariaLabel() ?? (label() ? null : placeholder())"
+      [attr.aria-required]="required() ? 'true' : null"
+      [attr.aria-invalid]="!!error()"
+      [attr.aria-describedby]="error() ? id() + '-error' : hint() ? id() + '-hint' : null"
+      (change)="handleChange($event)"
+      (blur)="handleBlur()"
+    >
+      @if (placeholder()) {
+        <option value="" [disabled]="required()" [selected]="value() === ''">
+          {{ placeholder() }}
+        </option>
+      }
+      @if (legacyOption(); as legacyOption) {
+        <option [value]="legacyOption.value" selected>{{ legacyOption.label }}</option>
+      }
+      @for (option of options(); track option.value) {
+        <option
+          [value]="option.value"
+          [disabled]="option.disabled ?? false"
+          [selected]="value() === option.value.toString()"
+        >
+          {{ option.label }}
+        </option>
+      }
+    </select>
+    <svg class="field__arrow" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path d="m3 6 5 5 5-5" />
+    </svg>
+  </div>
+  @if (error()) {
+    <span class="field__message field__message--error" [id]="id() + '-error'">{{ error() }}</span>
+  } @else if (hint()) {
+    <span class="field__message" [id]="id() + '-hint'">{{ hint() }}</span>
+  }
+</div>

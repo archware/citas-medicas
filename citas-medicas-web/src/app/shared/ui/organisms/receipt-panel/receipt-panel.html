@@ -1,0 +1,32 @@
+<section
+  class="receipt-panel__screen"
+  role="region"
+  [attr.aria-label]="ariaLabel() || null"
+  [attr.aria-labelledby]="ariaLabel() ? null : titleId()"
+>
+  <header class="receipt-panel__header">
+    <div class="receipt-panel__heading">
+      @if (eyebrow()) {
+        <p>{{ eyebrow() }}</p>
+      }
+      <h2 [id]="titleId()">{{ title() }}</h2>
+      @if (subtitle()) {
+        <span>{{ subtitle() }}</span>
+      }
+    </div>
+    <div class="receipt-panel__actions">
+      <ng-content select="[receipt-actions]" />
+    </div>
+  </header>
+
+  <dl class="receipt-panel__details">
+    @for (field of fields(); track field.id) {
+      <div [class.receipt-panel__detail--emphasis]="field.emphasis">
+        <dt>{{ field.label }}</dt>
+        <dd>{{ field.value }}</dd>
+      </div>
+    }
+  </dl>
+
+  <p class="receipt-panel__format">{{ formatLabel() }}</p>
+</section>

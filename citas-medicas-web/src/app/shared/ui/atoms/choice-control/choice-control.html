@@ -1,0 +1,17 @@
+<label class="choice" [class.choice--disabled]="disabled()" [for]="id()">
+  <input
+    class="choice__native"
+    [id]="id()"
+    [type]="type()"
+    [name]="name()"
+    [value]="value()"
+    [checked]="checked()"
+    [disabled]="disabled()"
+    [attr.aria-label]="accessibleLabel()"
+    (change)="handleChange($event)"
+  />
+  <span class="choice__indicator" aria-hidden="true"></span>
+  @if (label()) {
+    <span class="choice__label">{{ label() }}</span>
+  }
+</label>

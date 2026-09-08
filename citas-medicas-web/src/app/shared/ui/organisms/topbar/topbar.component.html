@@ -1,0 +1,43 @@
+<div class="topbar-container">
+  <div class="topbar-left">
+    <!-- Sidebar Toggle Button (usando IconButton) -->
+    <app-icon-button tooltip="Toggle Sidebar" (clicked)="toggleSidebar.emit()">
+      <i class="fa-solid fa-bars topbar-icon" aria-hidden="true"></i>
+    </app-icon-button>
+
+    <!-- Page Title -->
+    <h1 class="page-title">{{ title }}</h1>
+  </div>
+
+  <div class="topbar-right">
+    <!-- 0. Language Switcher -->
+    @if (showLanguageSwitcher) {
+      <app-language-switcher></app-language-switcher>
+    }
+
+    <!-- 1. Theme Switcher (slot) -->
+    <ng-content></ng-content>
+
+    <!-- 2. Notifications (usando IconButton con badge) -->
+    @if (showNotifications) {
+      <app-icon-button
+        tooltip="Notificaciones"
+        [badge]="notificationCount"
+        (clicked)="notificationClick.emit()"
+      >
+        <i class="fa-regular fa-bell topbar-icon" aria-hidden="true"></i>
+      </app-icon-button>
+    }
+
+    <!-- 3. User Menu (con dropdown) -->
+    <app-user-menu
+      [initials]="userInitials"
+      [userName]="userName"
+      [userEmail]="userEmail"
+      [userRole]="userRole"
+      (actionSelected)="onUserAction($event)"
+      (logout)="onLogout()"
+    >
+    </app-user-menu>
+  </div>
+</div>

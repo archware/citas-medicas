@@ -1,0 +1,218 @@
+<div
+  class="data-table__region"
+  [class.data-table__region--compact]="density() === 'compact'"
+>
+  @if (paginationEnabled()) {
+    <header class="data-table__toolbar">
+      <div class="data-table__summary">
+        <span
+          >Mostrando <strong>{{ rangeStart() }} - {{ rangeEnd() }}</strong> de
+          <strong>{{ effectiveTotalRecords() }}</strong> registro(s)</span
+        >
+      </div>
+
+      <div class="data-table__pagination">
+        <label class="data-table__page-size">
+          <span>POR PÁGINA:</span>
+          <select [value]="effectivePageSize()" (change)="onPageSizeChange($event)">
+            @for (size of pageSizeOptions(); track size) {
+              <option [value]="size" [selected]="size === effectivePageSize()">{{ size }}</option>
+            }
+          </select>
+        </label>
+
+        <span class="data-table__page-info">
+          Página {{ effectivePage() }} de {{ effectiveTotalPages() }}
+        </span>
+
+        <div class="data-table__page-buttons">
+          <button
+            class="data-table__page-btn"
+            type="button"
+            [disabled]="!effectiveHasPreviousPage() || status() === 'loading'"
+            (click)="onPageChange(effectivePage() - 1)"
+            aria-label="Página anterior"
+          >
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button
+            class="data-table__page-btn"
+            type="button"
+            [disabled]="!effectiveHasNextPage() || status() === 'loading'"
+            (click)="onPageChange(effectivePage() + 1)"
+            aria-label="Página siguiente"
+          >
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+  }
+
+  <app-scroll-overlay
+    class="data-table__viewport"
+    [skipTableDetection]="true"
+    role="region"
+    tabindex="0"
+    [attr.aria-label]="regionLabel()"
+  >
+    <table class="data-table" [attr.aria-busy]="effectiveStatus() === 'loading'">
+      <caption class="data-table__caption" [class.data-table__caption--hidden]="!captionVisible()">
+        {{
+          caption()
+        }}
+      </caption>
+
+      <thead>
+        <tr>
+          @if (showRowNumber()) {
+            <th
+              scope="col"
+              data-column="rowNumber"
+              class="data-table__cell--end"
+              [style.--data-table-column-width]="rowNumberWidth()"
+            >
+              <span class="data-table__heading">{{ rowNumberHeader() }}</span>
+            </th>
+          }
+
+          @for (column of columns(); track column.key) {
+            <th
+              scope="col"
+              [attr.data-column]="column.key"
+              [attr.aria-sort]="ariaSort(column)"
+              [style.--data-table-column-width]="column.width ?? null"
+              [class.data-table__cell--center]="column.align === 'center'"
+              [class.data-table__cell--end]="column.align === 'end'"
+            >
+              @if (column.sortable) {
+                <button
+                  class="data-table__sort-button"
+                  type="button"
+                  [attr.aria-label]="sortButtonLabel(column)"
+                  (click)="onSort(column)"
+                >
+                  <span>{{ column.header }}</span>
+                  <i
+                    class="fa-solid {{ sortIndicatorClass(column) }} data-table__sort-indicator"
+                    aria-hidden="true"
+                  ></i>
+                </button>
+              } @else {
+                <span class="data-table__heading">{{ column.header }}</span>
+              }
+            </th>
+          }
+
+          @if (actionsTemplate()) {
+            <th
+              scope="col"
+              class="data-table__actions-heading"
+              [style.--data-table-actions-width]="actionsWidth()"
+            >
+              {{ actionsHeader() }}
+            </th>
+          }
+        </tr>
+      </thead>
+
+      <tbody>
+        @switch (effectiveStatus()) {
+          @case ('loading') {
+            <tr class="data-table__state-row">
+              <td [attr.colspan]="columnSpan()">
+                <div class="data-table__state" role="status" aria-live="polite">
+                  <span class="data-table__spinner" aria-hidden="true"></span>
+                  <span>{{ loadingMessage() }}</span>
+                </div>
+              </td>
+            </tr>
+          }
+          @case ('error') {
+            <tr class="data-table__state-row">
+              <td [attr.colspan]="columnSpan()">
+                <app-alert kind="danger" spacing="none">
+                  <div class="data-table__state data-table__state--inline">
+                    <span>{{ errorMessage() }}</span>
+                    <button class="data-table__retry" type="button" (click)="retry.emit()">
+                      {{ retryLabel() }}
+                    </button>
+                  </div>
+                </app-alert>
+              </td>
+            </tr>
+          }
+          @case ('empty') {
+            <tr class="data-table__state-row">
+              <td [attr.colspan]="columnSpan()">
+                <div class="data-table__state" role="status">{{ emptyMessage() }}</div>
+              </td>
+            </tr>
+          }
+          @case ('idle') {
+            <tr class="data-table__state-row">
+              <td [attr.colspan]="columnSpan()">
+                <div class="data-table__state" role="status">{{ idleMessage() }}</div>
+              </td>
+            </tr>
+          }
+          @default {
+            @for (row of displayedRows(); track identifyRow($index, row); let rowIndex = $index) {
+              <tr>
+                @if (showRowNumber()) {
+                  <td
+                    data-column="rowNumber"
+                    [attr.data-label]="rowNumberHeader()"
+                    class="data-table__cell--end"
+                    [style.--data-table-column-width]="rowNumberWidth()"
+                  >
+                    {{ rowNumber(rowIndex) }}
+                  </td>
+                }
+
+                @for (column of columns(); track column.key) {
+                  <td
+                    [attr.data-column]="column.key"
+                    [attr.data-label]="column.header"
+                    [style.--data-table-column-width]="column.width ?? null"
+                    [class.data-table__cell--center]="column.align === 'center'"
+                    [class.data-table__cell--end]="column.align === 'end'"
+                  >
+                    @if (
+                      column.isBadge ||
+                      column.key === 'stateLabel' ||
+                      column.key === 'state' ||
+                      column.key === 'status'
+                    ) {
+                      <app-status-badge
+                        [status]="getBadgeStatus(column, row)"
+                        [label]="displayValue(column, row)"
+                      />
+                    } @else {
+                      {{ displayValue(column, row) }}
+                    }
+                  </td>
+                }
+
+                @if (actionsTemplate(); as actions) {
+                  <td
+                    class="data-table__actions"
+                    [attr.data-label]="actionsHeader()"
+                    [style.--data-table-actions-width]="actionsWidth()"
+                  >
+                    <div class="data-table__action-list">
+                      <ng-container
+                        [ngTemplateOutlet]="actions"
+                        [ngTemplateOutletContext]="actionContext(row, rowIndex)"
+                      ></ng-container>
+                    </div>
+                  </td>
+                }
+              </tr>
+            }
+          }
+        }
+      </tbody>
+    </table>
+  </app-scroll-overlay>
+</div>

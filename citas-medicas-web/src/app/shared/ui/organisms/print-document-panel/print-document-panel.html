@@ -1,0 +1,78 @@
+<section
+  class="print-document-panel"
+  role="region"
+  [attr.aria-label]="ariaLabel() || null"
+  [attr.aria-labelledby]="ariaLabel() ? null : titleId()"
+>
+  <header class="print-document-panel__header">
+    <div>
+      <h2 [id]="titleId()">{{ title() }}</h2>
+      @if (subtitle()) {
+        <p>{{ subtitle() }}</p>
+      }
+    </div>
+    <div class="print-document-panel__actions">
+      <ng-content select="[print-document-actions]" />
+    </div>
+  </header>
+
+  <div class="print-document-panel__pages">
+    @for (document of documents(); track document.id) {
+      <article class="print-document-panel__page">
+        @if (document.eyebrow) {
+          <p class="print-document-panel__eyebrow">{{ document.eyebrow }}</p>
+        }
+        <h3>{{ document.title }}</h3>
+        @if (document.subtitle) {
+          <p class="print-document-panel__subtitle">{{ document.subtitle }}</p>
+        }
+
+        @if (document.fields?.length) {
+          <dl class="print-document-panel__fields">
+            @for (field of document.fields; track field.id) {
+              <div>
+                <dt>{{ field.label }}</dt>
+                <dd>{{ field.value }}</dd>
+              </div>
+            }
+          </dl>
+        }
+
+        @for (section of document.sections ?? []; track section.id) {
+          <section class="print-document-panel__section">
+            <h4>{{ section.heading }}</h4>
+            @for (paragraph of section.paragraphs ?? []; track $index) {
+              <p>{{ paragraph }}</p>
+            }
+            @if (section.fields?.length) {
+              <dl class="print-document-panel__fields">
+                @for (field of section.fields; track field.id) {
+                  <div>
+                    <dt>{{ field.label }}</dt>
+                    <dd>{{ field.value }}</dd>
+                  </div>
+                }
+              </dl>
+            }
+            @if (section.table) {
+              <p class="print-document-panel__table-summary">
+                {{ section.table.caption }} · {{ section.table.rows.length }} registro(s)
+              </p>
+            }
+          </section>
+        }
+
+        @if (document.signatures?.length) {
+          <div class="print-document-panel__signatures">
+            @for (signature of document.signatures; track $index) {
+              <span>{{ signature }}</span>
+            }
+          </div>
+        }
+        @if (document.footer) {
+          <p class="print-document-panel__footer">{{ document.footer }}</p>
+        }
+      </article>
+    }
+  </div>
+</section>

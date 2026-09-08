@@ -1,0 +1,14 @@
+# Reproducibilidad de la identidad Atomic: el manifiesto hashea la forma clean
+# canonica de Git (LF para texto), no los EOL fisicos del working tree. Los
+# binarios conservan sus bytes exactos. CRLF sigue siendo la convencion del
+# workspace HRA en Windows, sin afectar la huella SHA-256.
+* text=auto eol=crlf
+
+# Binarios: sin conversion de finales de linea.
+*.png -text
+*.avif -text
+*.ico -text
+*.woff -text
+*.woff2 -text
+*.ttf -text
+*.eot -text

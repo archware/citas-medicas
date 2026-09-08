@@ -1,0 +1,84 @@
+/* =============================================================================
+   TOKENS DE MARCA - PERSONALIZACIÓN POR EMPRESA
+   =============================================================================
+
+   🎨 INSTRUCCIONES PARA PERSONALIZAR:
+   ──────────────────────────────────────────────────────────────────────────────
+   1. Cambia los valores de --brand-primary-* con los colores de tu empresa
+   2. Cambia los valores de --brand-secondary-* con el color secundario
+   3. Opcionalmente ajusta --brand-accent-* para un tercer color
+   4. Los colores deben seguir una escala de 50 (más claro) a 900 (más oscuro)
+
+   💡 TIP: Usa https://uicolors.app para generar escalas de color automáticamente
+
+   📅 Última actualización: Diciembre 2025
+   🏢 Marca actual: Lujo / Corporativo (Púrpura + Dorado)
+   ============================================================================= */
+
+:root {
+   /* ─────────────────────────────────────────────────────────────────────────
+     🟣 COLOR PRIMARIO DE MARCA (Púrpura Profundo)
+     Base: #5F295C
+     Estilo: Elegante, Serio, Premium
+     ───────────────────────────────────────────────────────────────────────── */
+   --brand-primary-50: #fbf5fb;
+   --brand-primary-100: #f5e6f6;
+   --brand-primary-200: #ecccec;
+   --brand-primary-300: #dfa6df;
+   --brand-primary-400: #bb6bbb;
+   --brand-primary-500: #5F295C;
+   /* ← COLOR PRINCIPAL */
+   --brand-primary-500-rgb: 95, 41, 92;
+   /* RGB para uso en rgba() */
+   --brand-primary-600: #4a2048;
+   --brand-primary-700: #381836;
+   --brand-primary-800: #261024;
+   --brand-primary-900: #1a0818;
+
+   /* Colores especiales de acento (derivados del primario) */
+   --brand-primary-A100: #e0aaff;
+   --brand-primary-A200: #c77dff;
+   --brand-primary-A400: #9d4edd;
+   --brand-primary-A700: #7b2cbf;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     🟡 COLOR SECUNDARIO DE MARCA (Dorado / Ámbar)
+     Base: #FFB800
+     Estilo: Contraste, Lujo, Llamativo
+     ───────────────────────────────────────────────────────────────────────── */
+   --brand-secondary-50: #fffbed;
+   --brand-secondary-100: #fff5d6;
+   --brand-secondary-200: #ffe6ad;
+   --brand-secondary-300: #ffd275;
+   --brand-secondary-400: #ffc400;
+   /* Ajustado para mejor visibilidad */
+   --brand-secondary-500: #FFB800;
+   /* ← COLOR SECUNDARIO PRINCIPAL */
+   --brand-secondary-500-rgb: 255, 184, 0;
+   /* RGB para uso en rgba() */
+   --brand-secondary-600: #e09600;
+   --brand-secondary-700: #b37000;
+   --brand-secondary-800: #8a5200;
+   --brand-secondary-900: #663a00;
+   --brand-secondary-950: #422300;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     ✨ COLOR DE ACENTO (Opcional - Rosa suave complementario)
+     Para elementos especiales, CTAs subtiles
+     ───────────────────────────────────────────────────────────────────────── */
+   --brand-accent-50: #fff0f7;
+   --brand-accent-100: #ffe3f1;
+   --brand-accent-200: #ffc6e3;
+   --brand-accent-300: #ff99ca;
+   --brand-accent-400: #ff5ca5;
+   --brand-accent-500: #f5368a;
+   --brand-accent-600: #d91c6e;
+   --brand-accent-700: #b50f55;
+   --brand-accent-800: #961148;
+   --brand-accent-900: #7d133f;
+
+   /* ─────────────────────────────────────────────────────────────────────────
+     🏢 METADATOS DE MARCA (para documentación)
+     Estos son comentarios de referencia, no afectan el CSS
+     ───────────────────────────────────────────────────────────────────────── */
+}

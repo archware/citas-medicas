@@ -1,0 +1,1265 @@
+{
+  "schemaVersion": 1,
+  "policyVersion": "1.2.2",
+  "changeId": "ATOMIC-5.7-MIGRACION",
+  "atomicRepository": "../-Atomic-UI",
+  "atomicRemote": "archware/-Atomic-UI",
+  "atomicRef": "c6fe16b94c736bb0eda22b555d8b7806510f73c7",
+  "atomicVersion": "5.7.4",
+  "atomicSourceTreeSha256": "0343e9cccf737e6cee5de1498a9d7889beec41a1f3598cd4f34e386335cb291f",
+  "contentCanonicalization": {
+    "scheme": "git-clean-eol-v1",
+    "textLineEnding": "lf",
+    "binary": "identity",
+    "unsupportedCleanTransform": "reject"
+  },
+  "packageRoot": ".",
+  "uiRoots": [
+    "src/app/shared/ui"
+  ],
+  "shellRoot": "src/app",
+  "featureRoots": [
+    "src/app/features",
+    "src/app/pages",
+    "src/app/dashboard"
+  ],
+  "layers": [
+    "atoms",
+    "molecules",
+    "organisms",
+    "surfaces",
+    "templates"
+  ],
+  "components": [
+    {
+      "local": "src/app/shared/ui/atoms/avatar",
+      "atomic": "src/app/shared/ui/atoms/avatar",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "avatar.component.spec.ts",
+          "localSha256": "7d4fdb277d86ba6fe2a90df05f5b1fe2a50dba888380ecbf959ab75d9df3f0b3",
+          "atomicSha256": "60df513b16855cd2ed5bd02263c19f5bbf409bda3d6c2873f14da75bed6367a7"
+        },
+        {
+          "file": "avatar.component.ts",
+          "localSha256": "4b6c792cf55a51140d7269abcdf5f320c2bf9af6b8de77f8b91c895cc3e86771",
+          "atomicSha256": "4b6c792cf55a51140d7269abcdf5f320c2bf9af6b8de77f8b91c895cc3e86771"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/badge",
+      "atomic": "src/app/shared/ui/atoms/badge",
+      "mode": "exact",
+      "files": [
+        "badge.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/breadcrumb",
+      "atomic": "src/app/shared/ui/atoms/breadcrumb",
+      "mode": "exact",
+      "files": [
+        "breadcrumb.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/button",
+      "atomic": "src/app/shared/ui/atoms/button",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "button.component.spec.ts",
+          "localSha256": "6fc5295ece036d5218ceefd7f1fec082463135fb7c85fd6237642baeb772458f",
+          "atomicSha256": "fc239ed499441a9e43de7a437e02ca418d0dbafd327701d3f7c25ebba0661a18"
+        },
+        {
+          "file": "button.component.ts",
+          "localSha256": "c894cc98c0271a92d413fbbd3e556887a5299f15937b519c545517c2c8678d0f",
+          "atomicSha256": "c894cc98c0271a92d413fbbd3e556887a5299f15937b519c545517c2c8678d0f"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/checkbox",
+      "atomic": "src/app/shared/ui/atoms/checkbox",
+      "mode": "exact",
+      "files": [
+        "checkbox.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/chip",
+      "atomic": "src/app/shared/ui/atoms/chip",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "chip.component.spec.ts",
+          "localSha256": "53ebb38ab9288e45a35b108bf2a8fb8d415d5668c0706f7a85ef9cfd2fdf3328",
+          "atomicSha256": "794ccc827f85e154c4ce5a934e6591ca0728469eea91db96aceeb887feba70c7"
+        },
+        {
+          "file": "chip.component.ts",
+          "localSha256": "a5cf767a934a8d2db7c3dfe72721cfc2e459929f333ef929a82bdf972ced0b6e",
+          "atomicSha256": "a5cf767a934a8d2db7c3dfe72721cfc2e459929f333ef929a82bdf972ced0b6e"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/choice-control",
+      "atomic": "src/app/shared/ui/atoms/choice-control",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "choice-control.html",
+          "localSha256": "d0443eb3ef03a2e45fabf30c8adf9f3df98a1204129a1d7fbdba2c303bf6fe3b",
+          "atomicSha256": "d0443eb3ef03a2e45fabf30c8adf9f3df98a1204129a1d7fbdba2c303bf6fe3b"
+        },
+        {
+          "file": "choice-control.scss",
+          "localSha256": "137744124fa322200e2547f715d64adab3854f01b45e60d6bb3cf2093038dd74",
+          "atomicSha256": "137744124fa322200e2547f715d64adab3854f01b45e60d6bb3cf2093038dd74"
+        },
+        {
+          "file": "choice-control.spec.ts",
+          "localSha256": "15c07c43b88db4884c9020fb3ff1c4b1bbabdc84a1c16ff4a68fbe1d85fba4ed",
+          "atomicSha256": "a9040b31eea4fa0557d8a9513e52f376a25c3e575193a9a27ec7920085802936"
+        },
+        {
+          "file": "choice-control.ts",
+          "localSha256": "cba57840d1768c3288cb66ab7dcab22daa8dc1a57e3dc09506e2aa81312fcd86",
+          "atomicSha256": "cba57840d1768c3288cb66ab7dcab22daa8dc1a57e3dc09506e2aa81312fcd86"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/divider",
+      "atomic": "src/app/shared/ui/atoms/divider",
+      "mode": "exact",
+      "files": [
+        "divider.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/file-input",
+      "atomic": "src/app/shared/ui/atoms/file-input",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "file-input.component.spec.ts",
+          "localSha256": "2f6aac49a3096b9c42b6341a35e294dff5b90ed228e7724d6c76c282eb776566",
+          "atomicSha256": "98a7cbc033a8040100af49a61e3a4d221e46a1c7971862b1ceb9eb64ea2881b3"
+        },
+        {
+          "file": "file-input.component.ts",
+          "localSha256": "76b24ecfa24b47480f114956174dd16a4d6c4cc0c73ca4639cd3ad9e4fb0b1e5",
+          "atomicSha256": "76b24ecfa24b47480f114956174dd16a4d6c4cc0c73ca4639cd3ad9e4fb0b1e5"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/floating-input",
+      "atomic": "src/app/shared/ui/atoms/floating-input",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "floating-input.component.spec.ts",
+          "localSha256": "f61f3cfe68fffef14544116c204c000c9292966bb567be1f19382c4a1d717c3a",
+          "atomicSha256": "0b50188e81b4c73c44cb7c7a8220b73fea0e5b38254dfb964257113a51b5d04d"
+        },
+        {
+          "file": "floating-input.component.ts",
+          "localSha256": "e38bb55ac77bc5ab5841e36034d7ddd3e879b79ad1a4a861f8b101de72e48541",
+          "atomicSha256": "e38bb55ac77bc5ab5841e36034d7ddd3e879b79ad1a4a861f8b101de72e48541"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/form-error",
+      "atomic": "src/app/shared/ui/atoms/form-error",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo missing-in-consumer. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "form-error.component.spec.ts",
+          "localSha256": null,
+          "atomicSha256": "35d1f17c3b7d971796420f8ec52cadc41e1acc8c4131176d387851c1b574fdb2"
+        },
+        {
+          "file": "form-error.component.ts",
+          "localSha256": "4b1877dd220907f5113b9ad335cef72bbc5d09aa402482e11f92e9d4aef3f7c1",
+          "atomicSha256": "4b1877dd220907f5113b9ad335cef72bbc5d09aa402482e11f92e9d4aef3f7c1"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/form-input",
+      "atomic": "src/app/shared/ui/atoms/form-input",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "input.html",
+          "localSha256": "5b972b7df0f7ac5ee7f3abe4368a048cc43a5257d78c400bfae23b7b81e132b2",
+          "atomicSha256": "5b972b7df0f7ac5ee7f3abe4368a048cc43a5257d78c400bfae23b7b81e132b2"
+        },
+        {
+          "file": "input.scss",
+          "localSha256": "7a3438229368c57373562485a82d06a7656d747f8f83265c92249ba7f76f9e54",
+          "atomicSha256": "7a3438229368c57373562485a82d06a7656d747f8f83265c92249ba7f76f9e54"
+        },
+        {
+          "file": "input.spec.ts",
+          "localSha256": "7d912607e029da3975cabfa8afcc11f586231a8ed4f947f9ffd5cf00614ce134",
+          "atomicSha256": "91711f1bdf92e16a233c56c2eda0417fa01f6be725f2dd99c0a3181abcfbdaa9"
+        },
+        {
+          "file": "input.ts",
+          "localSha256": "491316534c13ff0a5f419dec0be6e98e11af39523c426b9e1a5ef26e7407c60c",
+          "atomicSha256": "491316534c13ff0a5f419dec0be6e98e11af39523c426b9e1a5ef26e7407c60c"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/form-row",
+      "atomic": "src/app/shared/ui/atoms/form-row",
+      "mode": "exact",
+      "files": [
+        "form-row.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/form-select",
+      "atomic": "src/app/shared/ui/atoms/form-select",
+      "mode": "exact",
+      "files": [
+        "select.html",
+        "select.scss",
+        "select.spec.ts",
+        "select.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/icon-button",
+      "atomic": "src/app/shared/ui/atoms/icon-button",
+      "mode": "exact",
+      "files": [
+        "icon-button.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/input",
+      "atomic": "src/app/shared/ui/atoms/input",
+      "mode": "exact",
+      "files": [
+        "input.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/language-switcher",
+      "atomic": "src/app/shared/ui/atoms/language-switcher",
+      "mode": "exact",
+      "files": [
+        "language-switcher.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/loader",
+      "atomic": "src/app/shared/ui/atoms/loader",
+      "mode": "exact",
+      "files": [
+        "loader.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/number-input",
+      "atomic": "src/app/shared/ui/atoms/number-input",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "number-input.component.spec.ts",
+          "localSha256": "10b0c77f8073c5419825d74e7465115ccac033f8b832f314f7e3e19efe5e01c6",
+          "atomicSha256": "23a6a108ecfff8a80ecec3325852d2b807ed679009abe06cfbb3b58004be32ec"
+        },
+        {
+          "file": "number-input.component.ts",
+          "localSha256": "842ac99ddebaea6a802c33e9cdc61ccd366f53f1e5996f287b66bb12516bae6c",
+          "atomicSha256": "842ac99ddebaea6a802c33e9cdc61ccd366f53f1e5996f287b66bb12516bae6c"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/progress",
+      "atomic": "src/app/shared/ui/atoms/progress",
+      "mode": "exact",
+      "files": [
+        "progress.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/radio",
+      "atomic": "src/app/shared/ui/atoms/radio",
+      "mode": "exact",
+      "files": [
+        "radio.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/rating",
+      "atomic": "src/app/shared/ui/atoms/rating",
+      "mode": "exact",
+      "files": [
+        "rating.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/row",
+      "atomic": "src/app/shared/ui/atoms/row",
+      "mode": "exact",
+      "files": [
+        "row.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/select",
+      "atomic": "src/app/shared/ui/atoms/select",
+      "mode": "exact",
+      "files": [
+        "select.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/skeleton",
+      "atomic": "src/app/shared/ui/atoms/skeleton",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo missing-in-consumer. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "skeleton.component.spec.ts",
+          "localSha256": null,
+          "atomicSha256": "e9e75e6ac6b43bcea97a0f43a30e1bd5debb89a31abf66291e52f6117567cd38"
+        },
+        {
+          "file": "skeleton.component.ts",
+          "localSha256": "6bb30fdffd0bfe2ad74b0f7ea81c9227c0e6e3cd4593aaec3a89e74905d5d307",
+          "atomicSha256": "6bb30fdffd0bfe2ad74b0f7ea81c9227c0e6e3cd4593aaec3a89e74905d5d307"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/spinner",
+      "atomic": "src/app/shared/ui/atoms/spinner",
+      "mode": "exact",
+      "files": [
+        "spinner.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/status-badge",
+      "atomic": "src/app/shared/ui/atoms/status-badge",
+      "mode": "exact",
+      "files": [
+        "status-badge.component.spec.ts",
+        "status-badge.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/table",
+      "atomic": "src/app/shared/ui/atoms/table",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "table-cell.component.ts",
+          "localSha256": "47165779e426d51625a93da6321db6960f8473789f0fecb6d51f6bb62285fa8e",
+          "atomicSha256": "47165779e426d51625a93da6321db6960f8473789f0fecb6d51f6bb62285fa8e"
+        },
+        {
+          "file": "table-head.component.ts",
+          "localSha256": "fb3ce3a792df8232696ab0b3ea7d75830820bb8ca15a505f03eb5f268b24ad34",
+          "atomicSha256": "fb3ce3a792df8232696ab0b3ea7d75830820bb8ca15a505f03eb5f268b24ad34"
+        },
+        {
+          "file": "table-header-cell.component.ts",
+          "localSha256": "ba46821848092d705434a98b129a8381c857a75e90424788f7bdff7fbb13f030",
+          "atomicSha256": "ba46821848092d705434a98b129a8381c857a75e90424788f7bdff7fbb13f030"
+        },
+        {
+          "file": "table-row.component.ts",
+          "localSha256": "463fac7d3b9d0b42fa7133e856cae1b8e49c16d1b29332aeb57856f518bfe187",
+          "atomicSha256": "463fac7d3b9d0b42fa7133e856cae1b8e49c16d1b29332aeb57856f518bfe187"
+        },
+        {
+          "file": "table.component.spec.ts",
+          "localSha256": "ae72f846ed39b4854f67b7e6b06d23ff04c70c35fe2283af22a9e2150908e472",
+          "atomicSha256": "4cc37c4c843476a4f14a0f4b78021d317208ee3590e76e01b8bb7e2c83c6d97f"
+        },
+        {
+          "file": "table.component.ts",
+          "localSha256": "95cea55844d4649fa39f4d58407106088ea606b41f06a507c577a25497ce2b0b",
+          "atomicSha256": "95cea55844d4649fa39f4d58407106088ea606b41f06a507c577a25497ce2b0b"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/table-action",
+      "atomic": "src/app/shared/ui/atoms/table-action",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "table-action.html",
+          "localSha256": "5a41535cf515fb0b4aecedec4e69e3cb468ea4f22fa72ab6ca9511d931800205",
+          "atomicSha256": "5a41535cf515fb0b4aecedec4e69e3cb468ea4f22fa72ab6ca9511d931800205"
+        },
+        {
+          "file": "table-action.scss",
+          "localSha256": "579ac42b1fbadba25c8f0e89724f68ec34ac373307c4dffbdfcda4bd95f275b8",
+          "atomicSha256": "579ac42b1fbadba25c8f0e89724f68ec34ac373307c4dffbdfcda4bd95f275b8"
+        },
+        {
+          "file": "table-action.spec.ts",
+          "localSha256": "710baaa306065777cef391f57f0fed56709ba2543d5c4507d5b6ffe991635190",
+          "atomicSha256": "1713a025864aa23f47db310263aa21558f1c7c801cff68a7595a74c247248d15"
+        },
+        {
+          "file": "table-action.ts",
+          "localSha256": "d371a0842c1a4200f059303adc926a9ae3230e1e536bff58aadef703a1c1ec08",
+          "atomicSha256": "d371a0842c1a4200f059303adc926a9ae3230e1e536bff58aadef703a1c1ec08"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/text",
+      "atomic": "src/app/shared/ui/atoms/text",
+      "mode": "exact",
+      "files": [
+        "text.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/textarea",
+      "atomic": "src/app/shared/ui/atoms/textarea",
+      "mode": "exact",
+      "files": [
+        "textarea.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/toggle",
+      "atomic": "src/app/shared/ui/atoms/toggle",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "toggle.component.spec.ts",
+          "localSha256": "7deaa76552692b0357149f46f9a244190561e192392efd7343f87a56468660ae",
+          "atomicSha256": "2b9bfe4c9b12cbc7ac7de99ca550ecfae39dae8d79c393849ac4001cb0e05d59"
+        },
+        {
+          "file": "toggle.component.ts",
+          "localSha256": "528d8fd2a182eb335ee162a52757fc9d6522ef197ce9b94aba6ea9c30b5fca3d",
+          "atomicSha256": "528d8fd2a182eb335ee162a52757fc9d6522ef197ce9b94aba6ea9c30b5fca3d"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/tooltip",
+      "atomic": "src/app/shared/ui/atoms/tooltip",
+      "mode": "exact",
+      "files": [
+        "tooltip.directive.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/atoms/version",
+      "atomic": "src/app/shared/ui/atoms/version",
+      "mode": "exact",
+      "files": [
+        "version.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/action-group",
+      "atomic": "src/app/shared/ui/molecules/action-group",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "action-group.component.spec.ts",
+          "localSha256": "537659df59c4857191f688fba799eb967b447a1b7ecf878ef758e32e8042750b",
+          "atomicSha256": "5e63f5b84e68e9d09d40ff73a2fdbc04e836eaf33c7561a167f9ec9d09eb16e7"
+        },
+        {
+          "file": "action-group.component.ts",
+          "localSha256": "be86de0920f39fbcaee4c57b9d421e8057b486ae6bbe79be7a57651c58fb0be4",
+          "atomicSha256": "be86de0920f39fbcaee4c57b9d421e8057b486ae6bbe79be7a57651c58fb0be4"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/alert",
+      "atomic": "src/app/shared/ui/molecules/alert",
+      "mode": "exact",
+      "files": [
+        "alert.component.spec.ts",
+        "alert.component.ts",
+        "alert.scss"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/avatar-group",
+      "atomic": "src/app/shared/ui/molecules/avatar-group",
+      "mode": "exact",
+      "files": [
+        "avatar-group.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/card",
+      "atomic": "src/app/shared/ui/molecules/card",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "card.component.spec.ts",
+          "localSha256": "ece9d1c15ab76574e861d751347b6421cfdeca02fe6bf713c03d863ac3a0777d",
+          "atomicSha256": "8e21af4a53edf29fe18ff48198790349680e8340c34c36cc5ebf5e144d18da4d"
+        },
+        {
+          "file": "card.component.ts",
+          "localSha256": "efbf90cc761bec5e5c427021339532b9633b3abf46e64bf89cd4f87d6d46e72b",
+          "atomicSha256": "efbf90cc761bec5e5c427021339532b9633b3abf46e64bf89cd4f87d6d46e72b"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/combobox",
+      "atomic": "src/app/shared/ui/molecules/combobox",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo missing-in-consumer. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "combobox.component.spec.ts",
+          "localSha256": null,
+          "atomicSha256": "e8f14ff3f8d9f994512fc03e0d89346e2642e15d9a3d3d0fb070be59e07a2dd3"
+        },
+        {
+          "file": "combobox.component.ts",
+          "localSha256": "791837333cd6d59663d09eda3772eb9cae003c8e68137eddbc52112dc12fd589",
+          "atomicSha256": "791837333cd6d59663d09eda3772eb9cae003c8e68137eddbc52112dc12fd589"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/data-state",
+      "atomic": "src/app/shared/ui/molecules/data-state",
+      "mode": "exact",
+      "files": [
+        "data-state.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/datepicker",
+      "atomic": "src/app/shared/ui/molecules/datepicker",
+      "mode": "exact",
+      "files": [
+        "datepicker.component.css",
+        "datepicker.component.html",
+        "datepicker.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/dropdown",
+      "atomic": "src/app/shared/ui/molecules/dropdown",
+      "mode": "exact",
+      "files": [
+        "dropdown.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/kpi-card",
+      "atomic": "src/app/shared/ui/molecules/kpi-card",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "kpi-card.component.spec.ts",
+          "localSha256": "5da13858afe00b8f44f29c2a690fa2d82aaa8a5d2806f46cac22ec2b3e41f817",
+          "atomicSha256": "b1a76d7553291ffb24611cd492e878a388111f7c6aedc2ad24bee83895b81030"
+        },
+        {
+          "file": "kpi-card.component.ts",
+          "localSha256": "d2c4627315ce6582e42df104eee56eddd18957b30e3ea1c2f658acd3407c0e46",
+          "atomicSha256": "d2c4627315ce6582e42df104eee56eddd18957b30e3ea1c2f658acd3407c0e46"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/modal",
+      "atomic": "src/app/shared/ui/molecules/modal",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "modal-container.component.ts",
+          "localSha256": "77198624f548c16b46cd8c75646ee7cb48c708696ed06c4ae973902ecca9462c",
+          "atomicSha256": "77198624f548c16b46cd8c75646ee7cb48c708696ed06c4ae973902ecca9462c"
+        },
+        {
+          "file": "modal.component.spec.ts",
+          "localSha256": "6bf3fa112c4adf72ad6123932e750c625758f962af6a7d32106bf6729d71bec0",
+          "atomicSha256": "ba3c54fc2674fea5664af43d5ab90afd9f519d51fda04c318d1f0522ec216951"
+        },
+        {
+          "file": "modal.component.ts",
+          "localSha256": "32f636659c60e0015e144b353bcddf6ded95df7d572a9705e748763d22509161",
+          "atomicSha256": "32f636659c60e0015e144b353bcddf6ded95df7d572a9705e748763d22509161"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/pagination",
+      "atomic": "src/app/shared/ui/molecules/pagination",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "pagination.component.spec.ts",
+          "localSha256": "c4aac43a81a08c92b49187e7bac200da8cd69f5f99fd674bd38dc787e5c2fa3b",
+          "atomicSha256": "2d6b692b311a0c3653fbc221add8ea9fda8e472a0250513ba512444a3ec78cd2"
+        },
+        {
+          "file": "pagination.component.ts",
+          "localSha256": "0070d362be388504328afa4974ede3ba99d2efed205c61e92ddedb56324c3d93",
+          "atomicSha256": "0070d362be388504328afa4974ede3ba99d2efed205c61e92ddedb56324c3d93"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/popup",
+      "atomic": "src/app/shared/ui/molecules/popup",
+      "mode": "exact",
+      "files": [
+        "popup-container.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/select2",
+      "atomic": "src/app/shared/ui/molecules/select2",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo missing-in-consumer. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "select2.component.spec.ts",
+          "localSha256": null,
+          "atomicSha256": "5c86e39eb98b6c15a564e96d3ab791455a54cd0abe7d23e9b3e573cb070c6628"
+        },
+        {
+          "file": "select2.component.ts",
+          "localSha256": "5959596698d2079f91e8b66168f19fd70c59cf8adc35a3cb8bbdd395cf934ac8",
+          "atomicSha256": "5959596698d2079f91e8b66168f19fd70c59cf8adc35a3cb8bbdd395cf934ac8"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/table-actions",
+      "atomic": "src/app/shared/ui/molecules/table-actions",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "table-actions.component.css",
+          "localSha256": "ea05a7589a61c510b719a9d97d43d8758212467f8fa5c3605908875b89c50307",
+          "atomicSha256": "ea05a7589a61c510b719a9d97d43d8758212467f8fa5c3605908875b89c50307"
+        },
+        {
+          "file": "table-actions.component.html",
+          "localSha256": "0a161a6d290511c1118693f0284aa02aa6733f8bc1f1db0aa5a6f29e6f94283c",
+          "atomicSha256": "0a161a6d290511c1118693f0284aa02aa6733f8bc1f1db0aa5a6f29e6f94283c"
+        },
+        {
+          "file": "table-actions.component.spec.ts",
+          "localSha256": "af9a5d0825d9a928e5a4f15366cf2c2ed85b5829a11bb2653ac0bd203e1b6d8e",
+          "atomicSha256": "8fd649bd4ac103a18cc344b028478e8f9097126347559b471af485d9835cd1e3"
+        },
+        {
+          "file": "table-actions.component.ts",
+          "localSha256": "6efefc3ca86b9ad4d629b906ff93f24af5dfb1282c7375d1a8f303d0818203b7",
+          "atomicSha256": "6efefc3ca86b9ad4d629b906ff93f24af5dfb1282c7375d1a8f303d0818203b7"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/tag-input",
+      "atomic": "src/app/shared/ui/molecules/tag-input",
+      "mode": "exact",
+      "files": [
+        "tag-input.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/timeline",
+      "atomic": "src/app/shared/ui/molecules/timeline",
+      "mode": "exact",
+      "files": [
+        "timeline.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/toast",
+      "atomic": "src/app/shared/ui/molecules/toast",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "toast.component.spec.ts",
+          "localSha256": "17cec0d3b69daca0eb5ff8da034d669b2b2ed51ed6b08c34ed04d83adaa4f083",
+          "atomicSha256": "a5f07288e6ca37ab0ae56a5f91d21e3c619305127c9e617cc7530a1104a08ed2"
+        },
+        {
+          "file": "toast.component.ts",
+          "localSha256": "908bf3e85fd05f82e3689297c3ad61ac81d1442093aeadade3c1edcf9e8d0898",
+          "atomicSha256": "908bf3e85fd05f82e3689297c3ad61ac81d1442093aeadade3c1edcf9e8d0898"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/molecules/user-menu",
+      "atomic": "src/app/shared/ui/molecules/user-menu",
+      "mode": "exact",
+      "files": [
+        "user-menu.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/accordion",
+      "atomic": "src/app/shared/ui/organisms/accordion",
+      "mode": "exact",
+      "files": [
+        "accordion.component.spec.ts",
+        "accordion.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/chart",
+      "atomic": "src/app/shared/ui/organisms/chart",
+      "mode": "exact",
+      "files": [
+        "chart.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/crud-dialog",
+      "atomic": "src/app/shared/ui/organisms/crud-dialog",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "crud-dialog.html",
+          "localSha256": "aecbfcee6e34839b26713ef370c935ff52a589d1f347e8b6618d04d9f3a25cc4",
+          "atomicSha256": "aecbfcee6e34839b26713ef370c935ff52a589d1f347e8b6618d04d9f3a25cc4"
+        },
+        {
+          "file": "crud-dialog.scss",
+          "localSha256": "f5a5a4c21a46c17bf6a87a6c7cfb528dbfe24610cbd986295424412957daa0d1",
+          "atomicSha256": "f5a5a4c21a46c17bf6a87a6c7cfb528dbfe24610cbd986295424412957daa0d1"
+        },
+        {
+          "file": "crud-dialog.spec.ts",
+          "localSha256": "dd8f1bbca3a99eb040ef0ec1239acdff70c58a672a48b55605a766960da7d97c",
+          "atomicSha256": "f4542d7fe468bf825240a43b374b87a71a8611c5e2799ba9fb528ea1170f5ebc"
+        },
+        {
+          "file": "crud-dialog.ts",
+          "localSha256": "fe7d5a3bdb28d3a9d4d895b764df16dd0ac7266d5976eb6a968315cb67705a85",
+          "atomicSha256": "fe7d5a3bdb28d3a9d4d895b764df16dd0ac7266d5976eb6a968315cb67705a85"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/data-pager",
+      "atomic": "src/app/shared/ui/organisms/data-pager",
+      "mode": "exact",
+      "files": [
+        "data-pager.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/data-table",
+      "atomic": "src/app/shared/ui/organisms/data-table",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "data-table.html",
+          "localSha256": "e7d87a3f9af3155e7d3cda977f14a8e5d7fbda5864682b75d511893684ea187b",
+          "atomicSha256": "e7d87a3f9af3155e7d3cda977f14a8e5d7fbda5864682b75d511893684ea187b"
+        },
+        {
+          "file": "data-table.scss",
+          "localSha256": "cf652bf42f7cb62d2d2e3f19bafe41eaf90beb920430eff3352f4d448e267d38",
+          "atomicSha256": "cf652bf42f7cb62d2d2e3f19bafe41eaf90beb920430eff3352f4d448e267d38"
+        },
+        {
+          "file": "data-table.spec.ts",
+          "localSha256": "e4813d84ed561925519c7562433417a631b2d44779ee91dfe2bdafad47f8dc05",
+          "atomicSha256": "8ea900681195c5b4ec9d5e04590ceeb158184d90d19ce956b83d5be8ea6ab0eb"
+        },
+        {
+          "file": "data-table.ts",
+          "localSha256": "f80ec35a8fede1fdb13a9b397555d5a6604d09992e190a3be1fda61edad7f2b2",
+          "atomicSha256": "f80ec35a8fede1fdb13a9b397555d5a6604d09992e190a3be1fda61edad7f2b2"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/denomination-counter",
+      "atomic": "src/app/shared/ui/organisms/denomination-counter",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "denomination-counter.spec.ts",
+          "localSha256": "f7ae9848d29e2183504f77499260b4135786cf6834556108d4d893512127e495",
+          "atomicSha256": "5ea3b41b280d2ab123d0b7c4c3bc3a36eeaf89b7269759a338b45f5c63e5e55b"
+        },
+        {
+          "file": "denomination-counter.ts",
+          "localSha256": "1edffe1cd0cbe821cacffff9c0767342adf2b592802624b0eca544bfea687b7f",
+          "atomicSha256": "1edffe1cd0cbe821cacffff9c0767342adf2b592802624b0eca544bfea687b7f"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/filters",
+      "atomic": "src/app/shared/ui/organisms/filters",
+      "mode": "exact",
+      "files": [
+        "filters.component.css",
+        "filters.component.html",
+        "filters.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/footer",
+      "atomic": "src/app/shared/ui/organisms/footer",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "footer.component.spec.ts",
+          "localSha256": "2214b6892516358f046cc701bfe238ba7494b07769448ffa68e8ecd954cfefca",
+          "atomicSha256": "17b4f73000544384c2974242345b311a699700074284430011159539e9da93dc"
+        },
+        {
+          "file": "footer.component.ts",
+          "localSha256": "627691783f478877c5f917dc46976c9cb0d551ee2d9ccce91e6c6543082767ea",
+          "atomicSha256": "627691783f478877c5f917dc46976c9cb0d551ee2d9ccce91e6c6543082767ea"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/form-dialog",
+      "atomic": "src/app/shared/ui/organisms/form-dialog",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "form-dialog-actions.scss",
+          "localSha256": "d4b9c84621b30e5f981ab73265d163c38bb15340ea3a41eb77fa48b198d186f8",
+          "atomicSha256": "d4b9c84621b30e5f981ab73265d163c38bb15340ea3a41eb77fa48b198d186f8"
+        },
+        {
+          "file": "form-dialog.html",
+          "localSha256": "e01eb47ac963d156cd8200bcda21bc44de16593024216d2eeb3ded5581314bb0",
+          "atomicSha256": "e01eb47ac963d156cd8200bcda21bc44de16593024216d2eeb3ded5581314bb0"
+        },
+        {
+          "file": "form-dialog.scss",
+          "localSha256": "c18fbab66bf3ffa61a1ebe8fee945d5f7029401c89c5f61ecda215660038341b",
+          "atomicSha256": "c18fbab66bf3ffa61a1ebe8fee945d5f7029401c89c5f61ecda215660038341b"
+        },
+        {
+          "file": "form-dialog.spec.ts",
+          "localSha256": "fa45284c96935e4ceab0bd7026146821e2edf1d2d7d8ddb4c02e65ef4aa9a54c",
+          "atomicSha256": "d04004477cf340b964b46101b920f026400757d67703f07ae85cc0e05fae31f2"
+        },
+        {
+          "file": "form-dialog.ts",
+          "localSha256": "668500d4923d58da4024cd1fd3f0190192fb7dbd516cf6267765737f353d5871",
+          "atomicSha256": "668500d4923d58da4024cd1fd3f0190192fb7dbd516cf6267765737f353d5871"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/metrics-grid",
+      "atomic": "src/app/shared/ui/organisms/metrics-grid",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "metrics-grid.component.spec.ts",
+          "localSha256": "67c53e4307743a70592dc031145c506c494fa72bd91db58cb7ffbb415d3fe2d8",
+          "atomicSha256": "404ccf0a33e845af11f45cece3418861561b2a9b419991691d0e4542b3863b96"
+        },
+        {
+          "file": "metrics-grid.component.ts",
+          "localSha256": "5e5c8e03de2da78706d73111c4407442d461e24a0de6ea82cfb6678206cd00d1",
+          "atomicSha256": "5e5c8e03de2da78706d73111c4407442d461e24a0de6ea82cfb6678206cd00d1"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/navbar",
+      "atomic": "src/app/shared/ui/organisms/navbar",
+      "mode": "exact",
+      "files": [
+        "navbar.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/page-header",
+      "atomic": "src/app/shared/ui/organisms/page-header",
+      "mode": "exact",
+      "files": [
+        "page-header.html",
+        "page-header.scss",
+        "page-header.spec.ts",
+        "page-header.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/print-document-panel",
+      "atomic": "src/app/shared/ui/organisms/print-document-panel",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "print-document-panel.html",
+          "localSha256": "e69b52a1a827a39a0e18c35508e1bbdc6a0411b7b22ecf0fcee985537bcea63c",
+          "atomicSha256": "e69b52a1a827a39a0e18c35508e1bbdc6a0411b7b22ecf0fcee985537bcea63c"
+        },
+        {
+          "file": "print-document-panel.scss",
+          "localSha256": "2626aa7167bae6605881c5523ddc850421f2e6896e11bf46ff9b3956d509bc96",
+          "atomicSha256": "2626aa7167bae6605881c5523ddc850421f2e6896e11bf46ff9b3956d509bc96"
+        },
+        {
+          "file": "print-document-panel.spec.ts",
+          "localSha256": "1d9713ec3512444372b1710b5d5fcf804d6212860064e547214b079ba1267cfc",
+          "atomicSha256": "2c04afaa6f367cf889c9d7214361b0bb4d0980e4f86ad5a2204a47a46f65e982"
+        },
+        {
+          "file": "print-document-panel.ts",
+          "localSha256": "43131f2d63afe2d63b13b6edc3d270f235581fc5964f4c987ded2cb9b5ec795d",
+          "atomicSha256": "43131f2d63afe2d63b13b6edc3d270f235581fc5964f4c987ded2cb9b5ec795d"
+        },
+        {
+          "file": "README.md",
+          "localSha256": "30d487a9b0fb098fa467608d907a73114f439c19b67124400265c905cd9ad694",
+          "atomicSha256": "30d487a9b0fb098fa467608d907a73114f439c19b67124400265c905cd9ad694"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/query-toolbar",
+      "atomic": "src/app/shared/ui/organisms/query-toolbar",
+      "mode": "exact",
+      "files": [
+        "query-toolbar.html",
+        "query-toolbar.scss",
+        "query-toolbar.spec.ts",
+        "query-toolbar.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/receipt-panel",
+      "atomic": "src/app/shared/ui/organisms/receipt-panel",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "README.md",
+          "localSha256": "1609623345d2cd05f78c62eabefdb1f3a49419e8f440dea87ae673c149d880cd",
+          "atomicSha256": "1609623345d2cd05f78c62eabefdb1f3a49419e8f440dea87ae673c149d880cd"
+        },
+        {
+          "file": "receipt-panel.html",
+          "localSha256": "2c3c9e24c3a2372913df20b61820e425e588e09fc3569082dd32badacb663032",
+          "atomicSha256": "2c3c9e24c3a2372913df20b61820e425e588e09fc3569082dd32badacb663032"
+        },
+        {
+          "file": "receipt-panel.scss",
+          "localSha256": "babf89a4cfd15ced122482d54bd31d4c18a512ab0def8ebaf83a1250a6c14924",
+          "atomicSha256": "babf89a4cfd15ced122482d54bd31d4c18a512ab0def8ebaf83a1250a6c14924"
+        },
+        {
+          "file": "receipt-panel.spec.ts",
+          "localSha256": "b66180949b71fa43f1325c275824bc5b799bf0159d48c9ffadc5af32b6e02882",
+          "atomicSha256": "f58113a7d60c7283f7627328f4d43b84ebc0a3ce06e328d0dcf77f38eafa2234"
+        },
+        {
+          "file": "receipt-panel.ts",
+          "localSha256": "550a765869dba3d7484f04d3d3db3c79966865acf82814adf192dda06412bff4",
+          "atomicSha256": "550a765869dba3d7484f04d3d3db3c79966865acf82814adf192dda06412bff4"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/scroll-overlay",
+      "atomic": "src/app/shared/ui/organisms/scroll-overlay",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "scroll-overlay.component.css",
+          "localSha256": "8ccc9f89c6ffd8edc664f5879486a65d61722a21a5a13de7015ec6400bb78fef",
+          "atomicSha256": "8ccc9f89c6ffd8edc664f5879486a65d61722a21a5a13de7015ec6400bb78fef"
+        },
+        {
+          "file": "scroll-overlay.component.html",
+          "localSha256": "b95bab8c73b2c6d63853520448d76fb9818752949df1b59390c6ed0ed17c86b8",
+          "atomicSha256": "b95bab8c73b2c6d63853520448d76fb9818752949df1b59390c6ed0ed17c86b8"
+        },
+        {
+          "file": "scroll-overlay.component.spec.ts",
+          "localSha256": "1d2b6a5fc0b8f780a6f14da8f82411701cd55f149b179963ea8e8ae7b1dc0090",
+          "atomicSha256": "0afd028e2889df720f8a6840afdcfa6a7c1ba3088516283469091cc8a63cee29"
+        },
+        {
+          "file": "scroll-overlay.component.ts",
+          "localSha256": "bcfe51177e057037247613059f29cfdd5b7e2443677044205becbebcca8066a5",
+          "atomicSha256": "bcfe51177e057037247613059f29cfdd5b7e2443677044205becbebcca8066a5"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/sidebar",
+      "atomic": "src/app/shared/ui/organisms/sidebar",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "sidebar.component.css",
+          "localSha256": "fc5694e6a63d648ddfe55e2edbbfe6d798c652b239c407cf59546b938025aaf7",
+          "atomicSha256": "fc5694e6a63d648ddfe55e2edbbfe6d798c652b239c407cf59546b938025aaf7"
+        },
+        {
+          "file": "sidebar.component.html",
+          "localSha256": "5744b43564029b8641cd60534f8a00db35823d62b2bf52a7ec52eeaee95ba953",
+          "atomicSha256": "5744b43564029b8641cd60534f8a00db35823d62b2bf52a7ec52eeaee95ba953"
+        },
+        {
+          "file": "sidebar.component.spec.ts",
+          "localSha256": "36deea5b74f6680a078b4ce70bdc59a6ff182f0bc316aecf22429552f2815156",
+          "atomicSha256": "a8b03ac60022bfe73033b9385980af797e24997d986e33ac52a6bcadce1ae1a4"
+        },
+        {
+          "file": "sidebar.component.ts",
+          "localSha256": "fd118dc202d07aa2432ca559f47fa349a48abf4c4e6e3b5feecad0bd88db8ac1",
+          "atomicSha256": "fd118dc202d07aa2432ca559f47fa349a48abf4c4e6e3b5feecad0bd88db8ac1"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/stepper",
+      "atomic": "src/app/shared/ui/organisms/stepper",
+      "mode": "exact",
+      "files": [
+        "stepper.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/tabs",
+      "atomic": "src/app/shared/ui/organisms/tabs",
+      "mode": "exact",
+      "files": [
+        "tabs.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/theme-switcher",
+      "atomic": "src/app/shared/ui/organisms/theme-switcher",
+      "mode": "exact",
+      "files": [
+        "theme-switcher.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/organisms/topbar",
+      "atomic": "src/app/shared/ui/organisms/topbar",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "topbar.component.css",
+          "localSha256": "9684a2a672ff17cd7f7625781f6361620f4a6af8ff614bffa5dfc4d3eeb68452",
+          "atomicSha256": "9684a2a672ff17cd7f7625781f6361620f4a6af8ff614bffa5dfc4d3eeb68452"
+        },
+        {
+          "file": "topbar.component.html",
+          "localSha256": "86223d31ba5e37642eea318c19426d10aa1496c281ba8d057ef393cd54197235",
+          "atomicSha256": "86223d31ba5e37642eea318c19426d10aa1496c281ba8d057ef393cd54197235"
+        },
+        {
+          "file": "topbar.component.spec.ts",
+          "localSha256": "ad33a18a918bb1704ccc21b153dceebfb534e0227261fd60cd3c0ed1d431a65d",
+          "atomicSha256": "867302e0d93b32edbeec88d8896155286cff94ce1866088620d3b51a39d83532"
+        },
+        {
+          "file": "topbar.component.ts",
+          "localSha256": "f8e6d0cbbf87e413f0494b3293f1dade8085960c0f08dc34fd23e0638f90bad7",
+          "atomicSha256": "f8e6d0cbbf87e413f0494b3293f1dade8085960c0f08dc34fd23e0638f90bad7"
+        }
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/surfaces/panel",
+      "atomic": "src/app/shared/ui/surfaces/panel",
+      "mode": "exact",
+      "files": [
+        "panel.component.css",
+        "panel.component.html",
+        "panel.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/templates/auth-layout",
+      "atomic": "src/app/shared/ui/templates/auth-layout",
+      "mode": "exact",
+      "files": [
+        "auth-layout.component.css",
+        "auth-layout.component.html",
+        "auth-layout.component.ts"
+      ]
+    },
+    {
+      "local": "src/app/shared/ui/templates/layout-shell",
+      "atomic": "src/app/shared/ui/templates/layout-shell",
+      "mode": "adapted",
+      "justification": "Línea base auditada: 1 diferencia(s) de tipo content-divergence. La adaptación se conserva hasta su migración funcional.",
+      "decisionRecord": "docs/ATOMIC_DECISION_5.7.md",
+      "adaptationSnapshot": [
+        {
+          "file": "layout-shell.component.css",
+          "localSha256": "86318b5cd8d92e728ddc0a7b1e39de296edf3211bfdeb144e6a9b6ef341c9ffd",
+          "atomicSha256": "86318b5cd8d92e728ddc0a7b1e39de296edf3211bfdeb144e6a9b6ef341c9ffd"
+        },
+        {
+          "file": "layout-shell.component.html",
+          "localSha256": "f9f403c26f667421721ed909b5407cd30363d744c42d53abcc20f5a35cf7bb34",
+          "atomicSha256": "f9f403c26f667421721ed909b5407cd30363d744c42d53abcc20f5a35cf7bb34"
+        },
+        {
+          "file": "layout-shell.component.spec.ts",
+          "localSha256": "5577f469e13a80e7f97eeae8bf573beb920ae1f6c0e280867a5709bce703d783",
+          "atomicSha256": "21da2ad3ac7cc38246ca0a339367a87540038f12636c1945582bc2e3e7e33514"
+        },
+        {
+          "file": "layout-shell.component.ts",
+          "localSha256": "f7624eb974a904a104e10a46f93448f42385f64fe84a4fd9b0075f3afe3f320c",
+          "atomicSha256": "f7624eb974a904a104e10a46f93448f42385f64fe84a4fd9b0075f3afe3f320c"
+        }
+      ]
+    }
+  ],
+  "governedServices": [
+    {
+      "file": "theme.service.ts",
+      "mode": "exact"
+    },
+    {
+      "file": "app-version.service.ts",
+      "mode": "exact"
+    },
+    {
+      "file": "modal.service.ts",
+      "mode": "exact"
+    },
+    {
+      "file": "popup.service.ts",
+      "mode": "exact"
+    },
+    {
+      "file": "toast.service.ts",
+      "mode": "exact"
+    }
+  ],
+  "governanceArtifacts": [
+    {
+      "local": "docs/ATOMIC_GOVERNANCE.md",
+      "atomic": "governance/consumer/ATOMIC_GOVERNANCE.md"
+    },
+    {
+      "local": "scripts/check-atomic-provenance.mjs",
+      "atomic": "governance/consumer/check-atomic-provenance.mjs"
+    },
+    {
+      "local": "scripts/git-clean-eol.cjs",
+      "atomic": "governance/consumer/git-clean-eol.cjs"
+    },
+    {
+      "local": "scripts/safe-paths.cjs",
+      "atomic": "governance/consumer/safe-paths.cjs"
+    },
+    {
+      "local": "scripts/read-atomic-contract.cjs",
+      "atomic": "governance/consumer/read-atomic-contract.cjs"
+    },
+    {
+      "local": "scripts/source-manifest.cjs",
+      "atomic": "governance/consumer/source-manifest.cjs"
+    },
+    {
+      "local": ".github/workflows/atomic-governance.yml",
+      "atomic": "governance/consumer/atomic-governance.yml"
+    }
+  ],
+  "tokens": {
+    "atomic": "src/styles/themes/_tokens-components.css",
+    "consumer": "src/styles/themes/_tokens-components.css",
+    "required": []
+  }
+}

@@ -1,0 +1,109 @@
+:host {
+  display: block;
+  width: 100%;
+  min-width: 0;
+}
+
+.field {
+  display: grid;
+  min-width: 0;
+  gap: var(--space-1);
+}
+
+.field__label {
+  color: var(--text-color);
+  font-size: var(--text-sm);
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.field__required {
+  color: var(--danger-color);
+}
+
+.field__control {
+  position: relative;
+  min-width: 0;
+  color: var(--input-text);
+}
+
+.field__select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: var(--control-height);
+  min-height: var(--control-height);
+  padding: 0 calc(var(--space-8) + var(--space-1)) 0 var(--space-4);
+  border: 1px solid var(--input-border);
+  border-radius: var(--radius-md);
+  background-color: var(--input-bg);
+  background-image: none;
+  color: var(--input-text);
+  appearance: none;
+  cursor: pointer;
+  font: inherit;
+  box-shadow: var(--input-shadow, var(--shadow-sm));
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    background-color 160ms ease;
+}
+
+.field__select:hover:not(:disabled):not(:focus) {
+  border-color: var(--input-border-hover);
+  box-shadow: var(--input-shadow-hover);
+}
+
+.field__select:focus,
+.field__select:focus-visible {
+  border-color: var(--input-border-focus);
+  outline: none;
+  box-shadow: var(--input-shadow-focus);
+}
+
+/* Ver la nota de form-input/input.scss: la opacidad falseaba el contraste que
+   declaran los tokens y lo dejaba ilegible incluso con estos ya corregidos. */
+.field__select:disabled {
+  background-color: var(--input-disabled-bg);
+  color: var(--input-disabled-text);
+  cursor: not-allowed;
+}
+
+.field--error .field__select {
+  border-color: var(--danger-color);
+}
+
+.field__arrow {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  width: 1rem;
+  height: 1rem;
+  color: currentColor;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.field__arrow path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* La flecha recibía la atenuación por partida doble: la del propio `<select>`
+   deshabilitado y otra vez aquí, así que se apagaba más que el texto al que
+   acompaña. Basta con el token. */
+.field__select:disabled + .field__arrow {
+  color: var(--input-disabled-text);
+}
+
+.field__message {
+  color: var(--text-color-muted);
+  font-size: var(--text-xs);
+}
+
+.field__message--error {
+  color: var(--danger-color);
+}

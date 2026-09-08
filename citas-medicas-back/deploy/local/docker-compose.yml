@@ -1,0 +1,36 @@
+services:
+
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "${CITAS_SA_PASSWORD}"
+      MSSQL_PID: Developer
+    ports:
+      - "127.0.0.1:${CITAS_SQL_PORT:-14350}:1433"
+    volumes:
+      - citas_sql_datos:/var/opt/mssql
+    healthcheck:
+      test: ["CMD", "/opt/mssql-tools18/bin/sqlcmd", "-S", "localhost", "-U", "sa", "-P", "${CITAS_SA_PASSWORD}", "-Q", "SELECT 1", "-b", "-C"]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ../..
+      dockerfile: Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__CitasMedicas: "Server=sqlserver,1433;Database=${CITAS_DB:-citas_medicas};User Id=${CITAS_APP_USER};Password=${CITAS_APP_PASSWORD};TrustServerCertificate=True"
+    ports:
+      - "127.0.0.1:5090:8080"
+    depends_on:
+      sqlserver:
+        condition: service_healthy
+    restart: unless-stopped
+
+volumes:
+  citas_sql_datos:

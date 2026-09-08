@@ -1,0 +1,20 @@
+<dialog
+  #nativeDialog
+  class="crud-dialog crud-dialog--{{ size() }} {{ panelClass() }}"
+  [attr.aria-labelledby]="labelledBy()"
+  [attr.aria-describedby]="describedBy()"
+  (cancel)="handleCancel($event)"
+  (close)="handleClosed()"
+>
+  <app-scroll-overlay
+    class="crud-dialog__viewport"
+    verticalSelector="[data-crud-dialog-scroll-surface]"
+    horizontalSelector="[data-crud-dialog-scroll-surface]"
+    [skipTableDetection]="true"
+    [disableHorizontal]="true"
+  >
+    <div #scrollSurface class="crud-dialog__surface" data-crud-dialog-scroll-surface>
+      <ng-content />
+    </div>
+  </app-scroll-overlay>
+</dialog>

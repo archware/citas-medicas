@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  min-width: 0;
+  position: sticky;
+  z-index: 1;
+  bottom: 0;
+  background: var(--modal-bg);
+}
+
+.form-dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--form-row-gap);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--modal-border);
+}
+
+@media (max-width: 36rem) {
+  .form-dialog-actions {
+    align-items: stretch;
+    gap: var(--space-3);
+  }
+}

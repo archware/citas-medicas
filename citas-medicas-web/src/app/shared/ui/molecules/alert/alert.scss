@@ -1,0 +1,115 @@
+:host {
+  display: block;
+  min-width: 0;
+  max-width: 100%;
+}
+
+:host.alert-flow--default {
+  margin-block-end: var(--feedback-section-gap, 2.25rem);
+}
+
+:host.alert-flow--compact {
+  margin-block-end: var(--feedback-compact-gap, 1rem);
+}
+
+:host.alert-flow--none {
+  margin-block-end: 0;
+}
+
+.alert {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid currentColor;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.alert__icon {
+  flex: 0 0 auto;
+  margin-top: 0.2em;
+}
+
+.alert__body,
+.alert__message {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.alert__body {
+  flex: 1;
+}
+
+.alert__title {
+  display: block;
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+}
+
+.alert__message {
+  line-height: 1.5;
+}
+
+.alert__close {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.72;
+}
+
+.alert__close:hover {
+  background: rgb(255 255 255 / 45%);
+  opacity: 1;
+}
+
+.alert__close:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/*
+El texto usa la rampa `--alert-*-text`, no el color base del tono.
+
+`--warning-color` y compania son colores de RELLENO: sirven para un icono o un
+borde, no para leerse encima de su propio fondo claro. Usados como color de
+texto incumplian el minimo de 4,5:1 de WCAG 1.4.3 en los tres temas:
+
+  tono      claro          dark           brand-dark
+  info      3,69 -> 9,52   3,74 -> 7,57   2,95 -> 5,97
+  success   2,12 -> 4,79   6,32 (ya ok)   4,97 (ya ok)
+  warning   2,13 -> 4,76   6,20 (ya ok)   4,97 (ya ok)
+  danger    3,24 -> 7,60   4,06 -> 7,29   3,27 -> 5,88
+
+Los tokens `--alert-*-text` ya existian en _tokens-components.css y no los
+consumia ni un solo fichero del ecosistema.
+*/
+.alert--info {
+  background: var(--info-color-lighter);
+  color: var(--alert-info-text);
+}
+
+.alert--success {
+  background: var(--success-color-lighter);
+  color: var(--alert-success-text);
+}
+
+.alert--warning {
+  background: var(--warning-color-lighter);
+  color: var(--alert-warning-text);
+}
+
+.alert--danger {
+  background: var(--danger-color-lighter);
+  color: var(--alert-danger-text);
+}

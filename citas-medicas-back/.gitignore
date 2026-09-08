@@ -1,0 +1,27 @@
+## .NET build outputs
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+## Artefactos de compilacion
+*.dll
+*.pdb
+*.exe
+*.nupkg
+
+## Secretos y entorno local — NUNCA versionar
+.env
+*.env
+!*.env.example
+
+## Datos de herramientas
+.idea/
+*.DotSettings.user
+
+## Cobertura y resultados de prueba
+TestResults/
+coverage/
+*.trx
+*.coveragexml

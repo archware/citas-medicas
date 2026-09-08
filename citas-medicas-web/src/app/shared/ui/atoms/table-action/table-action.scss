@@ -1,0 +1,93 @@
+:host {
+  display: inline-flex;
+}
+
+.table-action {
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-color-secondary);
+  cursor: pointer;
+  line-height: 1;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease,
+    transform 120ms ease;
+}
+
+.table-action--sm {
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: var(--text-xs);
+  border-radius: var(--radius-sm);
+}
+
+.table-action--md {
+  width: 2.25rem;
+  height: 2.25rem;
+  font-size: 1.125rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-section);
+  border: 1px solid var(--border-color);
+}
+
+.table-action--lg {
+  width: 2.75rem;
+  height: 2.75rem;
+  font-size: 1.25rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-section);
+  border: 1px solid var(--border-color);
+}
+
+.table-action:not(:disabled):hover {
+  border-color: currentColor;
+  background: var(--surface-section);
+}
+
+.table-action:not(:disabled):active {
+  transform: translateY(1px);
+}
+
+.table-action:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
+.table-action:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  box-shadow: var(--shadow-focus-primary);
+}
+
+.table-action--primary { color: var(--primary-color); }
+.table-action--info { color: var(--info-color); }
+.table-action--success { color: var(--success-color); }
+.table-action--warning { color: var(--warning-color); }
+.table-action--danger { color: var(--danger-color); }
+
+.table-action__spinner {
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+  animation: table-action-spin 700ms linear infinite;
+}
+
+@keyframes table-action-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .table-action,
+  .table-action__spinner {
+    transition: none;
+    animation-duration: 1.4s;
+  }
+}
