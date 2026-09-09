@@ -1,12 +1,13 @@
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Aplicacion.CasosUso.Autenticacion.Comandos.IniciarSesion;
 
-public sealed class IniciarSesionVMValidador : AbstractValidator<IniciarSesionVM>
+public sealed class IniciarSesionComandoValidador : AbstractValidator<IniciarSesionComando>
 {
-    public IniciarSesionVMValidador()
+    public IniciarSesionComandoValidador()
     {
         RuleFor(x => x.Usuario).NotEmpty().MaximumLength(160);
         RuleFor(x => x.Clave).NotEmpty().MinimumLength(8);
     }
 }
+

@@ -1,12 +1,13 @@
-using FluentValidation;
+﻿using FluentValidation;
 
 namespace Aplicacion.CasosUso.Autenticacion.Comandos.RenovarToken;
 
-public sealed class RenovarTokenVMValidador : AbstractValidator<RenovarTokenVM>
+public sealed class RenovarTokenComandoValidador : AbstractValidator<RenovarTokenComando>
 {
-    public RenovarTokenVMValidador()
+    public RenovarTokenComandoValidador()
     {
         RuleFor(x => x.TokenAcceso).NotEmpty();
         RuleFor(x => x.TokenRefresco).NotEmpty();
     }
 }
+

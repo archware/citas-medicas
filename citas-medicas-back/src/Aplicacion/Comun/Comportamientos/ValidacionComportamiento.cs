@@ -1,4 +1,4 @@
-using FluentValidation;
+﻿using FluentValidation;
 using FluentValidation.Results;
 using MediatR;
 using Aplicacion.Comun.Modelos;
@@ -34,27 +34,27 @@ public sealed class ValidacionComportamiento<TSolicitud, TRespuesta>
 
         if (fallos.Count == 0) return await siguiente();
 
-        if (typeof(IOutcome).IsAssignableFrom(typeof(TRespuesta)))
+        if (typeof(ResultadoCitaMedica).IsAssignableFrom(typeof(TRespuesta)))
         {
             var mensaje = string.Join("; ", fallos.Select(f => f.ErrorMessage));
-            var detailError = new DetailError("422", mensaje);
+            var DetalleErrorCitaMedica = new ErrorCitaMedica("422", mensaje);
             
-            if (typeof(TRespuesta).IsGenericType && typeof(TRespuesta).GetGenericTypeDefinition() == typeof(IOutcome<>))
+            if (typeof(TRespuesta).IsGenericType && typeof(TRespuesta).GetGenericTypeDefinition() == typeof(ResultadoCitaMedica<>))
             {
                 var tipoGenerico = typeof(TRespuesta).GetGenericArguments()[0];
-                var tipoResultado = typeof(SuccessResult<>).MakeGenericType(tipoGenerico);
-                var resultado = (IOutcome)Activator.CreateInstance(tipoResultado)!;
+                var tipoResultado = typeof(ExitoCitaMedica<>).MakeGenericType(tipoGenerico);
+                var resultado = (ResultadoCitaMedica)Activator.CreateInstance(tipoResultado)!;
                 resultado.StatusCode = 422;
-                var prop = resultado.GetType().GetProperty("detailError");
-                prop?.SetValue(resultado, detailError);
+                var prop = resultado.GetType().GetProperty("DetalleErrorCitaMedica");
+                prop?.SetValue(resultado, DetalleErrorCitaMedica);
                 return (TRespuesta)resultado;
             }
             else
             {
-                var resultado = new SuccessResult
+                var resultado = new ExitoCitaMedica
                 {
                     StatusCode = 422,
-                    detailError = detailError
+                    DetalleErrorCitaMedica = DetalleErrorCitaMedica
                 };
                 return (TRespuesta)(object)resultado;
             }
@@ -63,3 +63,5 @@ public sealed class ValidacionComportamiento<TSolicitud, TRespuesta>
         throw new Excepciones.ValidacionExcepcion(fallos);
     }
 }
+
+
