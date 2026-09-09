@@ -3,7 +3,7 @@ using Aplicacion.Comun.Modelos;
 
 namespace Aplicacion.CasosUso.Pacientes.Comandos.CrearPaciente;
 
-public sealed record CrearPacienteVM(
+public sealed record CrearPacienteComando(
     string Nombres,
     string Apellidos,
     string NumeroDocumento,
@@ -13,4 +13,5 @@ public sealed record CrearPacienteVM(
     string? Genero,
     string? Direccion
 ) : IRequest<ResultadoCitaMedica<int>>;
+
 

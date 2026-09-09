@@ -21,7 +21,7 @@ public sealed class PacientesController : ControladorBase
 
     [HttpPost]
     [Produces("application/json")]
-    public async Task<IActionResult> Crear([FromBody] CrearPacienteVM comando)
+    public async Task<IActionResult> Crear([FromBody] CrearPacienteComando comando)
     {
         var r = await Mediator.Send(comando);
         return StatusCode(r.StatusCode, r);
@@ -44,4 +44,5 @@ public sealed class PacientesController : ControladorBase
         return StatusCode(r.StatusCode, r);
     }
 }
+
 

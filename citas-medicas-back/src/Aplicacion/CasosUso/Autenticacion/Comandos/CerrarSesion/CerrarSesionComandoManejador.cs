@@ -7,14 +7,14 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace Aplicacion.CasosUso.Autenticacion.Comandos.CerrarSesion;
 
-internal sealed class CerrarSesionComandoHandler
+internal sealed class CerrarSesionComandoManejador
     : IRequestHandler<CerrarSesionComando, ResultadoCitaMedica<bool>>
 {
     private readonly IListaNegraTokens _listaNegra;
     private readonly IServicioTokenRefresco _servicioTokenRefresco;
     private readonly IServicioUsuarioActual _servicioUsuario;
 
-    public CerrarSesionComandoHandler(
+    public CerrarSesionComandoManejador(
         IListaNegraTokens listaNegra,
         IServicioTokenRefresco servicioTokenRefresco,
         IServicioUsuarioActual servicioUsuario)
@@ -44,5 +44,6 @@ internal sealed class CerrarSesionComandoHandler
         return new ExitoCitaMedica<bool>(true);
     }
 }
+
 
 

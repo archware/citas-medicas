@@ -1,7 +1,19 @@
-﻿node_modules/
-dist/
-.angular/
-bin/
-obj/
+# Backend (.NET)
+**/bin/
+**/obj/
+*.user
+*.suo
+**/.vs/
+
+# Frontend (Angular)
+**/node_modules/
+**/dist/
+**/.angular/
+
+# Logs
 *.log
+
+# Entorno local
 .env
+*.env
+!*.env.example

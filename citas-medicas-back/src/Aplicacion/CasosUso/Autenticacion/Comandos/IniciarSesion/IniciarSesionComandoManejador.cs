@@ -8,7 +8,7 @@ using MediatR;
 
 namespace Aplicacion.CasosUso.Autenticacion.Comandos.IniciarSesion;
 
-internal sealed class IniciarSesionComandoHandler
+internal sealed class IniciarSesionComandoManejador
     : IRequestHandler<IniciarSesionComando, ResultadoCitaMedica<IniciarSesionRespuesta>>
 {
     private readonly IRepositorioUsuarios _repositorioUsuarios;
@@ -18,7 +18,7 @@ internal sealed class IniciarSesionComandoHandler
     private readonly IServicioTokenJwt _servicioTokenJwt;
     private readonly ConfiguracionSeguridad _configSeguridad;
 
-    public IniciarSesionComandoHandler(
+    public IniciarSesionComandoManejador(
         IRepositorioUsuarios repositorioUsuarios,
         IHashContrasena hashContrasena,
         IServicioIntentosLogin servicioIntentos,
@@ -65,5 +65,6 @@ internal sealed class IniciarSesionComandoHandler
         return new ExitoCitaMedica<IniciarSesionRespuesta>(new IniciarSesionRespuesta(tokenAcceso, tokenRefresco.Token, expiraEn));
     }
 }
+
 
 

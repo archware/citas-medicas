@@ -5,16 +5,16 @@ using Dominio.Entidades;
 
 namespace Aplicacion.CasosUso.Pacientes.Comandos.CrearPaciente;
 
-internal sealed class CrearPacienteHandler : IRequestHandler<CrearPacienteVM, ResultadoCitaMedica<int>>
+internal sealed class CrearPacienteComandoManejador : IRequestHandler<CrearPacienteComando, ResultadoCitaMedica<int>>
 {
     private readonly IRepositorioPacientes _repositorio;
 
-    public CrearPacienteHandler(IRepositorioPacientes repositorio)
+    public CrearPacienteComandoManejador(IRepositorioPacientes repositorio)
     {
         _repositorio = repositorio;
     }
 
-    public async Task<ResultadoCitaMedica<int>> Handle(CrearPacienteVM request, CancellationToken cancellationToken)
+    public async Task<ResultadoCitaMedica<int>> Handle(CrearPacienteComando request, CancellationToken cancellationToken)
     {
         var paciente = Paciente.Registrar(
             request.Nombres,
@@ -30,4 +30,5 @@ internal sealed class CrearPacienteHandler : IRequestHandler<CrearPacienteVM, Re
         return new ExitoCitaMedica<int>(id) { StatusCode = 201 };
     }
 }
+
 

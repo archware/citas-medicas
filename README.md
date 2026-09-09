@@ -14,7 +14,7 @@ Hemos incluido un archivo con todo lo necesario para que la base de datos se cre
 
 *(Nota: El script ha creado el usuario **admin** con contraseña **admin123** para que puedas iniciar sesión en la web).*
 
-*(Nota 2: Asegúrate de que las credenciales de tu SQL Server coincidan con las que están en el archivo `citas-medicas-back/src/WebApi/appsettings.Development.json`. Ejemplo:*
+*(Nota 2: Asegúrate de que las credenciales de tu SQL Server coincidan con las que están en el archivo `citas-medicas-back/src/CITAMEDICA/appsettings.json`. Ejemplo:*
 `"CitasMedicas": "Server=DELTA;Database=citas_medicas;User Id=sa;Password=arch;TrustServerCertificate=True;Encrypt=False;"`
 *Si los datos de tu servidor son diferentes, actualízalo en dicho archivo).*
 
@@ -24,7 +24,7 @@ Abre una terminal (PowerShell o CMD), entra a la carpeta del backend y ejecuta e
 
 ```powershell
 cd citas-medicas-back
-dotnet run --project src\WebApi\WebApi.csproj
+dotnet run --project src\CITAMEDICA\CITAMEDICA.csproj
 ```
 
 Verás que el servidor inicia (te dirá que está escuchando en el puerto `60826`). Déjalo corriendo y abre una nueva pestaña de terminal.

@@ -1,4 +1,4 @@
-﻿using System.Security.Claims;
+using System.Security.Claims;
 using System.Text;
 using Aplicacion.Comun.Interfaces;
 using Aplicacion.Comun.Interfaces.Configuracion;
@@ -10,9 +10,9 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace CITAMEDICA;
 
-public static class ConfigureServicesWebApi
+public static class ConfigureServicesCitaMedica
 {
-    public static IServiceCollection AnadirServiciosWebApi(
+    public static IServiceCollection AnadirServiciosCitaMedica(
         this IServiceCollection services, IConfiguration configuration)
     {
         // Servicio de usuario actual

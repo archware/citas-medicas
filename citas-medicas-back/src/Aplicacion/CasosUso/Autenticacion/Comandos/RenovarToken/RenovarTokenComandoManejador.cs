@@ -12,7 +12,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace Aplicacion.CasosUso.Autenticacion.Comandos.RenovarToken;
 
-internal sealed class RenovarTokenComandoHandler
+internal sealed class RenovarTokenComandoManejador
     : IRequestHandler<RenovarTokenComando, ResultadoCitaMedica<RenovarTokenRespuesta>>
 {
     private readonly IServicioTokenRefresco _servicioTokenRefresco;
@@ -21,7 +21,7 @@ internal sealed class RenovarTokenComandoHandler
     private readonly IServicioTokenJwt _servicioTokenJwt;
     private readonly ConfiguracionSeguridad _configSeguridad;
 
-    public RenovarTokenComandoHandler(
+    public RenovarTokenComandoManejador(
         IServicioTokenRefresco servicioTokenRefresco,
         IRepositorioUsuarios repositorioUsuarios,
         IConfiguracionJwt configJwt,
@@ -98,5 +98,6 @@ internal sealed class RenovarTokenComandoHandler
         return new ExitoCitaMedica<RenovarTokenRespuesta>(new RenovarTokenRespuesta(nuevoTokenAcceso, nuevoTokenRefresco.Token, expiraEn));
     }
 }
+
 
 

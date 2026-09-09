@@ -5,12 +5,12 @@ using MediatR;
 
 namespace Aplicacion.CasosUso.Autenticacion.Consultas.ObtenerPerfil;
 
-internal sealed class ObtenerPerfilConsultaHandler
+internal sealed class ObtenerPerfilConsultaManejador
     : IRequestHandler<ObtenerPerfilConsulta, ResultadoCitaMedica<PerfilUsuarioRespuesta>>
 {
     private readonly IRepositorioUsuarios _repositorioUsuarios;
 
-    public ObtenerPerfilConsultaHandler(IRepositorioUsuarios repositorioUsuarios)
+    public ObtenerPerfilConsultaManejador(IRepositorioUsuarios repositorioUsuarios)
     {
         _repositorioUsuarios = repositorioUsuarios;
     }
@@ -30,5 +30,6 @@ internal sealed class ObtenerPerfilConsultaHandler
                 usuario.BActivo));
     }
 }
+
 
 
