@@ -1,38 +1,38 @@
-/**
- * Contratos de autenticación de la CONSOLA DEL DUEÑO (identidad de plataforma).
+﻿/**
+ * Contratos de autenticaciÃ³n de la CONSOLA DEL DUEÃ‘O (identidad de plataforma).
  * El backend responde SIEMPRE 200 en el login: con tokens, con `mfaRequired`
- * (falta el código), con `mfaSetupRequired` (MFA obligatorio aún no enrolado: llega
- * un token de ARRANQUE que solo sirve para activarlo) o con `detailError`.
+ * (falta el cÃ³digo), con `mfaSetupRequired` (MFA obligatorio aÃºn no enrolado: llega
+ * un token de ARRANQUE que solo sirve para activarlo) o con `detalleErrorCitaMedica`.
  */
 
-/** Sesión completa emitida por POST /api/v1/plataforma/auth/login. */
+/** SesiÃ³n completa emitida por POST /api/v1/plataforma/auth/login. */
 export interface LoginSuccess {
   accessToken: string;
   refreshToken?: string;
   tokenType?: string;
   expiresAt?: string;
   username?: string;
-  /** Siempre 'plataforma' en la sesión completa. */
+  /** Siempre 'plataforma' en la sesiÃ³n completa. */
   scope?: string;
 }
 
-/** El administrador tiene MFA activo y falta el código. */
+/** El administrador tiene MFA activo y falta el cÃ³digo. */
 export interface LoginMfaRequired {
   mfaRequired: true;
 }
 
-/** MFA obligatorio aún no enrolado: token de arranque (scope plataforma.setup). */
+/** MFA obligatorio aÃºn no enrolado: token de arranque (scope plataforma.setup). */
 export interface LoginMfaSetupRequired {
   mfaSetupRequired: true;
   setupToken: string;
   username?: string;
 }
 
-export interface LoginDetailError {
-  detailError: { errorCode: string; message: string };
+export interface LogindetalleErrorCitaMedica {
+  detalleErrorCitaMedica: { errorCode: string; message: string };
 }
 
-export type LoginResult = LoginSuccess | LoginMfaRequired | LoginMfaSetupRequired | LoginDetailError;
+export type LoginResult = LoginSuccess | LoginMfaRequired | LoginMfaSetupRequired | LogindetalleErrorCitaMedica;
 
 export function isMfaRequired(result: LoginResult): result is LoginMfaRequired {
   return (result as LoginMfaRequired).mfaRequired === true;
@@ -43,8 +43,8 @@ export function isMfaSetupRequired(result: LoginResult): result is LoginMfaSetup
   return r.mfaSetupRequired === true && typeof r.setupToken === 'string' && r.setupToken.length > 0;
 }
 
-export function isDetailError(result: LoginResult): result is LoginDetailError {
-  return typeof (result as LoginDetailError).detailError === 'object' && (result as LoginDetailError).detailError !== null;
+export function isdetalleErrorCitaMedica(result: LoginResult): result is LogindetalleErrorCitaMedica {
+  return typeof (result as LogindetalleErrorCitaMedica).detalleErrorCitaMedica === 'object' && (result as LogindetalleErrorCitaMedica).detalleErrorCitaMedica !== null;
 }
 
 export function isLoginSuccess(result: LoginResult): result is LoginSuccess {
@@ -52,7 +52,7 @@ export function isLoginSuccess(result: LoginResult): result is LoginSuccess {
   return typeof token === 'string' && token.length > 0;
 }
 
-/** Cuerpo del login (PascalCase: así lo lee el backend). */
+/** Cuerpo del login (PascalCase: asÃ­ lo lee el backend). */
 export interface LoginRequest {
   Username: string;
   Password: string;
@@ -74,10 +74,11 @@ export interface Perfil {
   scope: string;
 }
 
-/** Lo que se persiste en el navegador (la sesión completa; nunca el token de arranque). */
+/** Lo que se persiste en el navegador (la sesiÃ³n completa; nunca el token de arranque). */
 export interface Session {
   accessToken: string;
   refreshToken?: string;
   tokenType?: string;
   username?: string;
 }
+

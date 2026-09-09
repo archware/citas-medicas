@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CitasApiService, ActualizarCitaDto, CitaResumen } from '../../core/api/citas-api.service';
 import { InputComponent, ButtonComponent, FormDialog, FormDialogActions } from '../../shared/ui';
@@ -131,7 +131,7 @@ export class EditarCitaComponent {
         this.actualizado.emit();
       },
       error: (err: any) => { 
-        const msg = err.error?.detailError || err.error?.title || err.error?.message || 'Error al actualizar la cita.';
+        const msg = err.error?.detalleErrorCitaMedica || err.error?.title || err.error?.message || 'Error al actualizar la cita.';
         this.error.set(typeof msg === 'string' ? msg : JSON.stringify(msg)); 
         this.enviando.set(false); 
       },
@@ -142,3 +142,4 @@ export class EditarCitaComponent {
     this.opened.set(false);
   }
 }
+

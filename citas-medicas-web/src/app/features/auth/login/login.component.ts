@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { Alert, AuthLayoutComponent, ButtonComponent, Input as FormInput } from 
 import { AuthApiService } from '../../../core/auth/auth-api.service';
 import { AuthStore } from '../../../core/auth/auth.store';
 import {
-  isDetailError,
+  isdetalleErrorCitaMedica,
   isLoginSuccess,
   isMfaRequired,
   isMfaSetupRequired,
@@ -15,10 +15,10 @@ import {
 import { extractErrorMessage } from '../../../core/http/api.util';
 
 /**
- * Login de la CONSOLA DEL DUEÑO (identidad de plataforma). Tres salidas del backend:
- * tokens (entra), `mfaRequired` (pide el código) o `mfaSetupRequired` (MFA obligatorio
- * aún no enrolado: se guarda el token de arranque y se va a /activar-mfa). Los
- * rechazos (credenciales, bloqueo) llegan como detailError y se pintan inline.
+ * Login de la CONSOLA DEL DUEÃ‘O (identidad de plataforma). Tres salidas del backend:
+ * tokens (entra), `mfaRequired` (pide el cÃ³digo) o `mfaSetupRequired` (MFA obligatorio
+ * aÃºn no enrolado: se guarda el token de arranque y se va a /activar-mfa). Los
+ * rechazos (credenciales, bloqueo) llegan como detalleErrorCitaMedica y se pintan inline.
  */
 @Component({
   selector: 'app-login',
@@ -27,11 +27,11 @@ import { extractErrorMessage } from '../../../core/http/api.util';
   template: `
     <app-auth-layout>
       <div slot="banner">
-        <h2 class="brand-title">Sistema de Citas Médicas</h2>
+        <h2 class="brand-title">Sistema de Citas MÃ©dicas</h2>
       </div>
 
       <div slot="header">
-        <h1 class="auth-title">Iniciar sesión</h1>
+        <h1 class="auth-title">Iniciar sesiÃ³n</h1>
         <p class="auth-subtitle">Ingresa con tu usuario administrador.</p>
       </div>
 
@@ -42,18 +42,18 @@ import { extractErrorMessage } from '../../../core/http/api.util';
       @if (mfaRequired()) {
         <form [formGroup]="form" (ngSubmit)="submitMfa()" class="d-flex flex-col gap-4">
           <app-alert kind="info" spacing="compact">
-            Ingresa el código de tu app de autenticación (o un código de recuperación).
+            Ingresa el cÃ³digo de tu app de autenticaciÃ³n (o un cÃ³digo de recuperaciÃ³n).
           </app-alert>
           <app-input
             formControlName="mfaCode"
-            label="Código de verificación"
+            label="CÃ³digo de verificaciÃ³n"
             placeholder="123456"
             autocomplete="one-time-code"
             [required]="true"
           />
           <div class="d-flex gap-3">
             <app-button type="submit" variant="primary" size="lg" class="flex-1" [disabled]="loading()">
-              {{ loading() ? 'Verificando…' : 'Verificar' }}
+              {{ loading() ? 'Verificandoâ€¦' : 'Verificar' }}
             </app-button>
             <app-button type="button" variant="ghost" size="lg" [disabled]="loading()" (buttonClick)="resetToCredentials()">
               Volver
@@ -71,14 +71,14 @@ import { extractErrorMessage } from '../../../core/http/api.util';
           />
           <app-input
             formControlName="password"
-            label="Contraseña"
+            label="ContraseÃ±a"
             type="password"
             autocomplete="current-password"
             [revealable]="true"
             [required]="true"
           />
           <app-button type="submit" variant="primary" size="lg" [disabled]="loading()">
-            {{ loading() ? 'Ingresando…' : 'Ingresar' }}
+            {{ loading() ? 'Ingresandoâ€¦' : 'Ingresar' }}
           </app-button>
         </form>
       }
@@ -127,7 +127,7 @@ export class LoginComponent {
 
   protected readonly loading = signal(false);
   protected readonly errorMessage = signal<string | null>(null);
-  /** El backend pidió el segundo factor: se muestra el campo de código. */
+  /** El backend pidiÃ³ el segundo factor: se muestra el campo de cÃ³digo. */
   protected readonly mfaRequired = signal(false);
 
   protected readonly form = this.fb.nonNullable.group({
@@ -139,7 +139,7 @@ export class LoginComponent {
   protected submitCredentials(): void {
     if (this.form.controls.username.invalid || this.form.controls.password.invalid) {
       this.form.markAllAsTouched();
-      this.errorMessage.set('Ingresa usuario y contraseña.');
+      this.errorMessage.set('Ingresa usuario y contraseÃ±a.');
       return;
     }
     this.attemptLogin();
@@ -147,7 +147,7 @@ export class LoginComponent {
 
   protected submitMfa(): void {
     if (!this.form.controls.mfaCode.value.trim()) {
-      this.errorMessage.set('Ingresa el código de verificación.');
+      this.errorMessage.set('Ingresa el cÃ³digo de verificaciÃ³n.');
       return;
     }
     this.attemptLogin();
@@ -177,7 +177,7 @@ export class LoginComponent {
           }
 
           if (isMfaSetupRequired(result)) {
-            // MFA obligatorio aún no enrolado: token de arranque (solo memoria) y a enrolar.
+            // MFA obligatorio aÃºn no enrolado: token de arranque (solo memoria) y a enrolar.
             this.authStore.setSetupToken(result.setupToken, result.username ?? username);
             void this.router.navigateByUrl('/activar-mfa');
             return;
@@ -188,12 +188,12 @@ export class LoginComponent {
             return;
           }
 
-          if (isDetailError(result)) {
-            this.errorMessage.set(result.detailError.message || 'Credenciales inválidas.');
+          if (isdetalleErrorCitaMedica(result)) {
+            this.errorMessage.set(result.detalleErrorCitaMedica.message || 'Credenciales invÃ¡lidas.');
             return;
           }
 
-          this.errorMessage.set('No se pudo iniciar sesión. Intenta nuevamente.');
+          this.errorMessage.set('No se pudo iniciar sesiÃ³n. Intenta nuevamente.');
         },
         error: (error) => {
           this.loading.set(false);
@@ -207,3 +207,4 @@ export class LoginComponent {
     return param && param.startsWith('/') ? param : '/app';
   }
 }
+

@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
 
 import { AuthStore } from './auth.store';
@@ -16,7 +16,7 @@ describe('AuthStore (gate scope=plataforma)', () => {
 
   afterEach(() => localStorage.clear());
 
-  it('una sesión con scope=plataforma autentica y expone el usuario del claim', () => {
+  it('una sesiÃ³n con scope=plataforma autentica y expone el usuario del claim', () => {
     const store = TestBed.inject(AuthStore);
     const exp = Math.floor(Date.now() / 1000) + 900;
     store.setSession({ accessToken: jwt({ scope: 'plataforma', unique_name: 'dueno', exp }), refreshToken: 'r' });
@@ -24,10 +24,10 @@ describe('AuthStore (gate scope=plataforma)', () => {
     expect(store.isAuthenticated()).toBe(true);
     expect(store.esPlataforma()).toBe(true);
     expect(store.username()).toBe('dueno');
-    expect(localStorage.getItem('saas-admin.session')).toContain('"refreshToken":"r"');
+    expect(localStorage.getItem('citas-medicas.session')).toContain('"refreshToken":"r"');
   });
 
-  it('un JWT de empleado (sin scope) NO abre la consola aunque esté en localStorage', () => {
+  it('un JWT de empleado (sin scope) NO abre la consola aunque estÃ© en localStorage', () => {
     const store = TestBed.inject(AuthStore);
     const exp = Math.floor(Date.now() / 1000) + 900;
     store.setSession({ accessToken: jwt({ tenant_id: 'x', role: 'Administrador', exp }), refreshToken: 'r' });
@@ -41,7 +41,7 @@ describe('AuthStore (gate scope=plataforma)', () => {
     store.setSetupToken('tok-setup', 'dueno');
     expect(store.setupToken()).toBe('tok-setup');
     expect(store.setupUsername()).toBe('dueno');
-    expect(localStorage.getItem('saas-admin.session')).toBeNull();
+    expect(localStorage.getItem('citas-medicas.session')).toBeNull();
 
     store.setSession({ accessToken: jwt({ scope: 'plataforma', exp: Math.floor(Date.now() / 1000) + 900 }) });
     expect(store.setupToken()).toBeNull();
@@ -63,3 +63,4 @@ describe('AuthStore (gate scope=plataforma)', () => {
     expect(store.refreshToken()).toBe('r2');
   });
 });
+

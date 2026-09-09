@@ -1,10 +1,10 @@
-import { Injectable, inject } from '@angular/core';
+﻿import { Injectable, inject } from '@angular/core';
 import { HttpClient, HttpContext } from '@angular/common/http';
 import { Observable, catchError, map, of, timeout } from 'rxjs';
 
 import { SUPRIMIR_TOAST_NEGOCIO, apiUrl, unwrap } from '../http/api.util';
 import {
-  isDetailError,
+  isdetalleErrorCitaMedica,
   isLoginSuccess,
   type LoginRequest,
   type LoginResult,
@@ -17,7 +17,7 @@ import {
 export interface MfaSetupResp { exito: boolean; secret?: string; otpauthUri?: string; mensaje?: string; }
 export interface MfaEnableResp { exito: boolean; recoveryCodes?: readonly string[]; mensaje?: string; }
 
-/** Rutas de la identidad de PLATAFORMA (consola del dueño). */
+/** Rutas de la identidad de PLATAFORMA (consola del dueÃ±o). */
 export const PLATAFORMA_AUTH = {
   login: '/api/v1/plataforma/auth/login',
   refresh: '/api/auth/refresh',
@@ -34,7 +34,7 @@ export class AuthApiService {
 
   /**
    * POST /api/v1/plataforma/auth/login [AllowAnonymous]. Devuelve tokens, o
-   * `mfaRequired`, o `mfaSetupRequired` (token de arranque), o `detailError`.
+   * `mfaRequired`, o `mfaSetupRequired` (token de arranque), o `detalleErrorCitaMedica`.
    */
   login(body: LoginRequest): Observable<LoginResult> {
     const payload = {
@@ -67,9 +67,9 @@ export class AuthApiService {
   }
 
   /**
-   * POST /api/auth/refresh [AllowAnonymous] — renueva el par (conserva el scope).
-   * El backend responde los fallos como 200 con detailError: aquí se convierten en
-   * error del stream para que el interceptor cierre la sesión.
+   * POST /api/auth/refresh [AllowAnonymous] â€” renueva el par (conserva el scope).
+   * El backend responde los fallos como 200 con detalleErrorCitaMedica: aquÃ­ se convierten en
+   * error del stream para que el interceptor cierre la sesiÃ³n.
    */
   refresh(accessToken: string, refreshToken: string): Observable<LoginSuccess> {
     return this.http
@@ -82,7 +82,7 @@ export class AuthApiService {
           const result = unwrap<LoginResult>(response);
           if (!isLoginSuccess(result)) {
             throw new Error(
-              isDetailError(result) ? result.detailError.message : 'No se pudo renovar la sesión.',
+              isdetalleErrorCitaMedica(result) ? result.detalleErrorCitaMedica.message : 'No se pudo renovar la sesiÃ³n.',
             );
           }
           return result;
@@ -90,50 +90,50 @@ export class AuthApiService {
       );
   }
 
-  /** GET /api/v1/plataforma/auth/me — perfil del administrador de la sesión. */
+  /** GET /api/v1/plataforma/auth/me â€” perfil del administrador de la sesiÃ³n. */
   me(): Observable<Perfil> {
     return this.http.get<unknown>(apiUrl(PLATAFORMA_AUTH.me)).pipe(map((r) => unwrap<Perfil>(r)));
   }
 
-  /** GET mfa/status — ¿el administrador ya enroló su segundo factor? (vale con token de arranque) */
+  /** GET mfa/status â€” Â¿el administrador ya enrolÃ³ su segundo factor? (vale con token de arranque) */
   mfaStatus(): Observable<MfaStatus> {
     return this.http
       .get<unknown>(apiUrl(PLATAFORMA_AUTH.mfaStatus))
       .pipe(map((r) => unwrap<MfaStatus>(r)));
   }
 
-  /** POST mfa/setup — inicia el enrolamiento (secreto + otpauth para el QR). */
+  /** POST mfa/setup â€” inicia el enrolamiento (secreto + otpauth para el QR). */
   mfaSetup(): Observable<MfaSetupResp> {
     const context = new HttpContext().set(SUPRIMIR_TOAST_NEGOCIO, true);
     return this.http
       .post<unknown>(apiUrl(PLATAFORMA_AUTH.mfaSetup), {}, { context })
       .pipe(
         map((r) => {
-          const raw = (r ?? {}) as { detailError?: { message: string }; value?: MfaSetupResp };
-          if (raw.detailError) return { exito: false, mensaje: raw.detailError.message };
+          const raw = (r ?? {}) as { detalleErrorCitaMedica?: { message: string }; value?: MfaSetupResp };
+          if (raw.detalleErrorCitaMedica) return { exito: false, mensaje: raw.detalleErrorCitaMedica.message };
           return { exito: true, secret: raw.value?.secret, otpauthUri: raw.value?.otpauthUri };
         }),
       );
   }
 
-  /** POST mfa/enable — confirma con un código y devuelve los códigos de recuperación (una vez). */
+  /** POST mfa/enable â€” confirma con un cÃ³digo y devuelve los cÃ³digos de recuperaciÃ³n (una vez). */
   mfaEnable(code: string): Observable<MfaEnableResp> {
     const context = new HttpContext().set(SUPRIMIR_TOAST_NEGOCIO, true);
     return this.http
       .post<unknown>(apiUrl(PLATAFORMA_AUTH.mfaEnable), { code }, { context })
       .pipe(
         map((r) => {
-          const raw = (r ?? {}) as { detailError?: { message: string }; value?: MfaEnableResp };
-          if (raw.detailError) return { exito: false, mensaje: raw.detailError.message };
+          const raw = (r ?? {}) as { detalleErrorCitaMedica?: { message: string }; value?: MfaEnableResp };
+          if (raw.detalleErrorCitaMedica) return { exito: false, mensaje: raw.detalleErrorCitaMedica.message };
           return { exito: true, recoveryCodes: raw.value?.recoveryCodes ?? [] };
         }),
       );
   }
 
   /**
-   * POST /api/v1/plataforma/auth/logout — cierra la sesión EN EL SERVIDOR (lista negra
-   * + revocación del refresh). Nunca falla hacia el usuario: la sesión local ya se
-   * borró antes de llamar, por eso el token va explícito.
+   * POST /api/v1/plataforma/auth/logout â€” cierra la sesiÃ³n EN EL SERVIDOR (lista negra
+   * + revocaciÃ³n del refresh). Nunca falla hacia el usuario: la sesiÃ³n local ya se
+   * borrÃ³ antes de llamar, por eso el token va explÃ­cito.
    */
   logout(accessToken: string | null, refreshToken: string | null, todosLosDispositivos = false): Observable<void> {
     const context = new HttpContext().set(SUPRIMIR_TOAST_NEGOCIO, true);
@@ -152,3 +152,4 @@ export class AuthApiService {
       );
   }
 }
+

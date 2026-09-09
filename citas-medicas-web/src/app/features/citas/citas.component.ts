@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { CitasApiService, CitaResumen } from '../../core/api/citas-api.service';
@@ -14,7 +14,7 @@ import { EditarCitaComponent } from './editar-cita.component';
   template: `
     <div class="page-container">
       <div class="page-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <h1>Citas médicas</h1>
+        <h1>Citas mÃ©dicas</h1>
         <app-button (buttonClick)="mostrarFormulario.set(true)">Nueva cita</app-button>
       </div>
 
@@ -23,7 +23,7 @@ import { EditarCitaComponent } from './editar-cita.component';
           <app-input type="date" placeholder="Fecha..." [(ngModel)]="filtroFecha" (keyup.enter)="cargar()"></app-input>
         </div>
         <div style="flex: 1; max-width: 200px;">
-          <app-input type="text" placeholder="ID Médico..." [(ngModel)]="filtroMedico" (keyup.enter)="cargar()"></app-input>
+          <app-input type="text" placeholder="ID MÃ©dico..." [(ngModel)]="filtroMedico" (keyup.enter)="cargar()"></app-input>
         </div>
         <div style="flex: 1; max-width: 200px;">
           <app-input type="text" placeholder="Estado (ej. PROGRAMADA)" [(ngModel)]="filtroEstado" (keyup.enter)="cargar()"></app-input>
@@ -69,11 +69,11 @@ export class CitasComponent implements OnInit {
   readonly columnas: readonly DataTableColumn<CitaResumen>[] = [
     { key: 'id', header: 'ID', sortable: true },
     { key: 'nombrePaciente', header: 'Paciente', sortable: true },
-    { key: 'nombreMedico', header: 'Médico', sortable: true },
+    { key: 'nombreMedico', header: 'MÃ©dico', sortable: true },
     { key: 'fechaHora', header: 'Fecha', sortable: true, format: (val) => this.datePipe.transform(val as string, 'dd/MM/yyyy HH:mm') || '' },
     { key: 'estado', header: 'Estado', sortable: true },
     { key: 'motivo', header: 'Motivo', sortable: true },
-    { key: 'diagnostico', header: 'Diagnóstico', sortable: true },
+    { key: 'diagnostico', header: 'DiagnÃ³stico', sortable: true },
     { key: 'tratamiento', header: 'Tratamiento', sortable: true }
   ];
 
@@ -100,11 +100,11 @@ export class CitasComponent implements OnInit {
       this.citaSeleccionada.set(row);
       this.mostrarEditar.set(true);
     } else if (actionId === 'cancel') {
-      if (confirm('¿Seguro que desea cancelar esta cita?')) {
+      if (confirm('Â¿Seguro que desea cancelar esta cita?')) {
         this.api.cancelar(row.id).subscribe({
           next: () => this.cargar(),
           error: (err: any) => {
-             const msg = err.error?.detailError || err.error?.title || err.error?.message || 'Error al cancelar.';
+             const msg = err.error?.detalleErrorCitaMedica || err.error?.title || err.error?.message || 'Error al cancelar.';
              alert(typeof msg === 'string' ? msg : JSON.stringify(msg));
           }
         });
@@ -112,3 +112,4 @@ export class CitasComponent implements OnInit {
     }
   }
 }
+

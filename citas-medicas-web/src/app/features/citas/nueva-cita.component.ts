@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, model, output, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, model, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CitasApiService, RegistrarCitaDto } from '../../core/api/citas-api.service';
 import { PacientesApiService, PacienteResumen } from '../../core/api/pacientes-api.service';
@@ -188,8 +188,8 @@ export class NuevaCitaComponent {
       error: (err: any) => {
         console.error('Error al registrar:', err);
         let msg = 'Error al registrar la cita.';
-        if (err.error?.detailError) {
-          msg = typeof err.error.detailError === 'string' ? err.error.detailError : JSON.stringify(err.error.detailError);
+        if (err.error?.detalleErrorCitaMedica) {
+          msg = typeof err.error.detalleErrorCitaMedica === 'string' ? err.error.detalleErrorCitaMedica : JSON.stringify(err.error.detalleErrorCitaMedica);
         } else if (err.error?.title) {
           msg = err.error.title;
         } else if (err.error?.message) {
@@ -205,3 +205,4 @@ export class NuevaCitaComponent {
     this.opened.set(false);
   }
 }
+

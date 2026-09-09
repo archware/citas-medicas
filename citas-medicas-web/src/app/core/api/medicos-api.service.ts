@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+﻿import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -33,11 +33,11 @@ export interface ResultadoGrilla<T> {
   totalPaginas: number;
 }
 
-export interface IOutcome<T> {
+export interface ResultadoCitaMedica<T> {
   statusCode: number;
   hasSucceeded: boolean;
   value: T;
-  detailError: any;
+  detalleErrorCitaMedica: any;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -45,24 +45,25 @@ export class MedicosApiService {
   private readonly http = inject(HttpClient);
   private readonly base = `${environment.apiBaseUrl}/api/v1/plataforma/medicos`;
 
-  obtenerTodos(pagina = 1, tamanioPagina = 10, filtro?: string): Observable<IOutcome<ResultadoGrilla<MedicoResumen[]>>> {
+  obtenerTodos(pagina = 1, tamanioPagina = 10, filtro?: string): Observable<ResultadoCitaMedica<ResultadoGrilla<MedicoResumen[]>>> {
     const params: Record<string, string> = {
       pagina: String(pagina),
       tamanioPagina: String(tamanioPagina)
     };
     if (filtro) params['filtro'] = filtro;
-    return this.http.get<IOutcome<ResultadoGrilla<MedicoResumen[]>>>(this.base, { params });
+    return this.http.get<ResultadoCitaMedica<ResultadoGrilla<MedicoResumen[]>>>(this.base, { params });
   }
 
-  registrar(dto: RegistrarMedicoDto): Observable<IOutcome<number>> {
-    return this.http.post<IOutcome<number>>(this.base, dto);
+  registrar(dto: RegistrarMedicoDto): Observable<ResultadoCitaMedica<number>> {
+    return this.http.post<ResultadoCitaMedica<number>>(this.base, dto);
   }
 
-  actualizar(dto: ActualizarMedicoDto): Observable<IOutcome<boolean>> {
-    return this.http.put<IOutcome<boolean>>(`${this.base}/${dto.id}`, dto);
+  actualizar(dto: ActualizarMedicoDto): Observable<ResultadoCitaMedica<boolean>> {
+    return this.http.put<ResultadoCitaMedica<boolean>>(`${this.base}/${dto.id}`, dto);
   }
 
-  eliminar(id: number): Observable<IOutcome<boolean>> {
-    return this.http.delete<IOutcome<boolean>>(`${this.base}/${id}`);
+  eliminar(id: number): Observable<ResultadoCitaMedica<boolean>> {
+    return this.http.delete<ResultadoCitaMedica<boolean>>(`${this.base}/${id}`);
   }
 }
+

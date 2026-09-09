@@ -1,10 +1,10 @@
-import { HttpContextToken, HttpErrorResponse } from '@angular/common/http';
+﻿import { HttpContextToken, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 
 /**
  * Marca una request para que el interceptor NO toastee sus errores de negocio
  * (400/409/422/5xx): la pantalla los muestra inline (p.ej. el alert de un
- * diálogo) y el toast duplicaría el mismo mensaje.
+ * diÃ¡logo) y el toast duplicarÃ­a el mismo mensaje.
  */
 export const SUPRIMIR_TOAST_NEGOCIO = new HttpContextToken<boolean>(() => false);
 
@@ -43,7 +43,7 @@ export interface ProblemDetails {
   readonly codigo?: number | string;
   readonly titulo?: string;
   readonly detalle?: string;
-  readonly detailError?: {
+  readonly detalleErrorCitaMedica?: {
     readonly errorCode?: string;
     readonly message?: string;
   };
@@ -55,7 +55,7 @@ export interface ProblemDetails {
 export function extractErrorMessage(error: unknown): string {
   if (error instanceof HttpErrorResponse) {
     if (error.status === 0) {
-      return 'No se pudo conectar con el servidor. Verifica que el backend esté disponible.';
+      return 'No se pudo conectar con el servidor. Verifica que el backend estÃ© disponible.';
     }
     const body = error.error as ProblemDetails | string | null;
     if (typeof body === 'string' && body.trim()) {
@@ -63,7 +63,7 @@ export function extractErrorMessage(error: unknown): string {
     }
     if (body && typeof body === 'object') {
       const parts: string[] = [];
-      const errorObj = (body.detailError as any) ?? body;
+      const errorObj = (body.detalleErrorCitaMedica as any) ?? body;
       
       if (errorObj.errorCode ?? errorObj.codigo) {
         parts.push(String(errorObj.errorCode ?? errorObj.codigo));
@@ -81,10 +81,10 @@ export function extractErrorMessage(error: unknown): string {
   if (error instanceof Error && error.message) {
     return error.message;
   }
-  return 'Ocurrió un error inesperado.';
+  return 'OcurriÃ³ un error inesperado.';
 }
 
-/** Página estándar del backend: `{ data, page, pageSize, totalRecords, totalPages }`. */
+/** PÃ¡gina estÃ¡ndar del backend: `{ data, page, pageSize, totalRecords, totalPages }`. */
 export interface Paged<T> {
   readonly data: readonly T[];
   readonly page: number;
@@ -95,7 +95,7 @@ export interface Paged<T> {
 
 /**
  * Normaliza una respuesta de lista a `Paged<T>` tolerando:
- *  - la forma canónica `{ data, page, ... }`,
+ *  - la forma canÃ³nica `{ data, page, ... }`,
  *  - un arreglo plano,
  *  - `{ items: [...] }` u otras variantes con arreglo interno.
  */
@@ -126,3 +126,4 @@ export function toPaged<T>(body: unknown, fallbackPage = 1, fallbackPageSize = 1
 
   return { data: [], page: fallbackPage, pageSize: fallbackPageSize, totalRecords: 0, totalPages: 1 };
 }
+

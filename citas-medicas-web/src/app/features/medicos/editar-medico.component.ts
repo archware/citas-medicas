@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MedicosApiService, ActualizarMedicoDto, MedicoResumen } from '../../core/api/medicos-api.service';
 import { InputComponent, ButtonComponent, FormDialog, FormDialogActions } from '../../shared/ui';
@@ -54,9 +54,10 @@ export class EditarMedicoComponent {
     const dto: ActualizarMedicoDto = { ...this.form };
     this.api.actualizar(dto).subscribe({
       next: () => { this.enviando.set(false); this.opened.set(false); this.actualizado.emit(); },
-      error: (err: any) => { this.error.set(err.error?.detailError || err.error?.title || 'Error al actualizar.'); this.enviando.set(false); }
+      error: (err: any) => { this.error.set(err.error?.detalleErrorCitaMedica || err.error?.title || 'Error al actualizar.'); this.enviando.set(false); }
     });
   }
 
   cancelar(): void { this.opened.set(false); }
 }
+

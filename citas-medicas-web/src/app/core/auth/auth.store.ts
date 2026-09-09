@@ -1,10 +1,10 @@
-import { Injectable, computed, signal } from '@angular/core';
+﻿import { Injectable, computed, signal } from '@angular/core';
 import type { LoginSuccess, Session } from './auth.models';
 
-/** Clave PROPIA de la consola: no pisa la sesión del ERP/POS en el mismo navegador. */
-const STORAGE_KEY = 'saas-admin.session';
+/** Clave PROPIA de la consola: no pisa la sesiÃ³n del ERP/POS en el mismo navegador. */
+const STORAGE_KEY = 'citas-medicas.session';
 
-/** Scope de la sesión completa de plataforma (claim `scope` del JWT). */
+/** Scope de la sesiÃ³n completa de plataforma (claim `scope` del JWT). */
 export const SCOPE_PLATAFORMA = 'plataforma';
 /** Scope del token de ARRANQUE (solo enrolar el MFA). */
 export const SCOPE_MFA_SETUP = 'plataforma.setup';
@@ -17,13 +17,13 @@ interface JwtPayload {
 }
 
 /**
- * Fuente única de verdad de la sesión de la CONSOLA DEL DUEÑO. Custodia la sesión
+ * Fuente Ãºnica de verdad de la sesiÃ³n de la CONSOLA DEL DUEÃ‘O. Custodia la sesiÃ³n
  * completa (scope=plataforma) en una signal reflejada en localStorage, y el token de
  * ARRANQUE del enrolamiento MFA solo en memoria (muere al recargar: se vuelve a
- * iniciar sesión, que es lo correcto para un token de un solo propósito).
+ * iniciar sesiÃ³n, que es lo correcto para un token de un solo propÃ³sito).
  *
  * Defensa en profundidad: un JWT de empleado pegado en localStorage NO abre la
- * consola — `isAuthenticated` exige el claim `scope=plataforma`.
+ * consola â€” `isAuthenticated` exige el claim `scope=plataforma`.
  */
 @Injectable({ providedIn: 'root' })
 export class AuthStore {
@@ -33,9 +33,9 @@ export class AuthStore {
 
   constructor() {
     if (this.isBrowser()) {
-      // Sincroniza la sesión ENTRE PESTAÑAS: la rotación del refresh token es de un
-      // solo uso; si una pestaña renueva y otra no se entera, la segunda consumiría el
-      // token viejo y la detección de reuso revocaría todas las sesiones.
+      // Sincroniza la sesiÃ³n ENTRE PESTAÃ‘AS: la rotaciÃ³n del refresh token es de un
+      // solo uso; si una pestaÃ±a renueva y otra no se entera, la segunda consumirÃ­a el
+      // token viejo y la detecciÃ³n de reuso revocarÃ­a todas las sesiones.
       window.addEventListener('storage', (event) => {
         if (event.key !== STORAGE_KEY) {
           return;
@@ -67,14 +67,14 @@ export class AuthStore {
       return false;
     }
     // Vigente, o vencido pero RENOVABLE: el interceptor lo renueva en la primera
-    // llamada; si el refresh token también murió, esa llamada cierra la sesión.
+    // llamada; si el refresh token tambiÃ©n muriÃ³, esa llamada cierra la sesiÃ³n.
     return !this.isExpired(session.accessToken) || !!session.refreshToken;
   });
 
   /** Usuario del administrador (del login, o del claim unique_name del JWT). */
   readonly username = computed(() => this._session()?.username ?? (this.claim('unique_name') ?? ''));
 
-  /** Guarda una sesión nueva (tras login completo) y descarta cualquier token de arranque. */
+  /** Guarda una sesiÃ³n nueva (tras login completo) y descarta cualquier token de arranque. */
   setSession(login: LoginSuccess, extra?: { username?: string }): void {
     const session: Session = {
       accessToken: login.accessToken,
@@ -100,9 +100,9 @@ export class AuthStore {
 
   /**
    * Aplica el par de tokens ROTADO por /api/auth/refresh conservando el resto de la
-   * sesión. `refreshTokenUsado` es el stale-guard: si el par vigente ya no es el que
-   * esta renovación consumió (otra pestaña lo reemplazó mientras el POST volaba),
-   * aplicar la respuesta revertiría la sesión a un par viejo.
+   * sesiÃ³n. `refreshTokenUsado` es el stale-guard: si el par vigente ya no es el que
+   * esta renovaciÃ³n consumiÃ³ (otra pestaÃ±a lo reemplazÃ³ mientras el POST volaba),
+   * aplicar la respuesta revertirÃ­a la sesiÃ³n a un par viejo.
    */
   applyTokens(tokens: LoginSuccess, refreshTokenUsado?: string): void {
     const previous = this._session();
@@ -122,7 +122,7 @@ export class AuthStore {
     this.writeToStorage(session);
   }
 
-  /** true si el access token venció o vence en < margen (renovar ANTES del 401). */
+  /** true si el access token venciÃ³ o vence en < margen (renovar ANTES del 401). */
   tokenPorVencer(margenSegundos = 30): boolean {
     const token = this.token();
     if (!token) {
@@ -207,3 +207,4 @@ export class AuthStore {
     return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
   }
 }
+

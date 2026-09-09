@@ -1,4 +1,4 @@
-import { Injectable, inject } from '@angular/core';
+﻿import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
@@ -36,11 +36,11 @@ export interface ResultadoGrilla<T> {
   totalPaginas: number;
 }
 
-export interface IOutcome<T> {
+export interface ResultadoCitaMedica<T> {
   statusCode: number;
   hasSucceeded: boolean;
   value: T;
-  detailError: any;
+  detalleErrorCitaMedica: any;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -48,25 +48,26 @@ export class PacientesApiService {
   private readonly http = inject(HttpClient);
   private readonly base = `${environment.apiBaseUrl}/api/v1/plataforma/pacientes`;
 
-  registrar(dto: RegistrarPacienteDto): Observable<IOutcome<number>> {
-    return this.http.post<IOutcome<number>>(this.base, dto);
+  registrar(dto: RegistrarPacienteDto): Observable<ResultadoCitaMedica<number>> {
+    return this.http.post<ResultadoCitaMedica<number>>(this.base, dto);
   }
 
-  actualizar(dto: ActualizarPacienteDto): Observable<IOutcome<boolean>> {
-    return this.http.put<IOutcome<boolean>>(`${this.base}/${dto.id}`, dto);
+  actualizar(dto: ActualizarPacienteDto): Observable<ResultadoCitaMedica<boolean>> {
+    return this.http.put<ResultadoCitaMedica<boolean>>(`${this.base}/${dto.id}`, dto);
   }
 
-  eliminar(id: number): Observable<IOutcome<boolean>> {
-    return this.http.delete<IOutcome<boolean>>(`${this.base}/${id}`);
+  eliminar(id: number): Observable<ResultadoCitaMedica<boolean>> {
+    return this.http.delete<ResultadoCitaMedica<boolean>>(`${this.base}/${id}`);
   }
 
-  obtenerTodos(pagina = 1, tamanioPagina = 10, documento?: string, nombre?: string): Observable<IOutcome<ResultadoGrilla<PacienteResumen[]>>> {
+  obtenerTodos(pagina = 1, tamanioPagina = 10, documento?: string, nombre?: string): Observable<ResultadoCitaMedica<ResultadoGrilla<PacienteResumen[]>>> {
     const params: Record<string, string> = {
       pagina: String(pagina),
       tamanioPagina: String(tamanioPagina)
     };
     if (documento) params['documento'] = documento;
     if (nombre) params['nombre'] = nombre;
-    return this.http.get<IOutcome<ResultadoGrilla<PacienteResumen[]>>>(this.base, { params });
+    return this.http.get<ResultadoCitaMedica<ResultadoGrilla<PacienteResumen[]>>>(this.base, { params });
   }
 }
+

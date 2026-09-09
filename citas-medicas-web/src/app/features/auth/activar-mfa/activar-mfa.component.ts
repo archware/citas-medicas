@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DomSanitizer, type SafeHtml } from '@angular/platform-browser';
@@ -11,9 +11,9 @@ import { AuthStore } from '../../../core/auth/auth.store';
 
 /**
  * Enrolamiento OBLIGATORIO del segundo factor tras el primer login (o tras
- * desactivarlo): el login entregó un token de ARRANQUE (scope plataforma.setup) que
- * solo sirve aquí. Pasos: generar la clave → añadirla en la app de autenticación →
- * confirmar con un código → guardar los códigos de recuperación → volver al login.
+ * desactivarlo): el login entregÃ³ un token de ARRANQUE (scope plataforma.setup) que
+ * solo sirve aquÃ­. Pasos: generar la clave â†’ aÃ±adirla en la app de autenticaciÃ³n â†’
+ * confirmar con un cÃ³digo â†’ guardar los cÃ³digos de recuperaciÃ³n â†’ volver al login.
  */
 @Component({
   selector: 'app-activar-mfa',
@@ -22,8 +22,8 @@ import { AuthStore } from '../../../core/auth/auth.store';
   template: `
     <app-auth-layout>
       <div slot="banner">
-        <p class="brand-eyebrow">SaaS Mini-ERP</p>
-        <h2 class="brand-title">Consola del dueño</h2>
+        <p class="brand-eyebrow">Sistema de Citas Médicas</p>
+        <h2 class="brand-title">Consola del dueÃ±o</h2>
         <p class="brand-copy">La cuenta que gobierna todas las empresas exige un segundo factor.</p>
       </div>
 
@@ -33,7 +33,7 @@ import { AuthStore } from '../../../core/auth/auth.store';
           @if (username()) {
             Cuenta <strong>{{ username() }}</strong>.
           }
-          Necesitas una app de autenticación (Google Authenticator, Authy, Microsoft Authenticator…).
+          Necesitas una app de autenticaciÃ³n (Google Authenticator, Authy, Microsoft Authenticatorâ€¦).
         </p>
       </div>
 
@@ -45,11 +45,11 @@ import { AuthStore } from '../../../core/auth/auth.store';
         @case ('inicio') {
           <div class="d-flex flex-col gap-4">
             <app-alert kind="info" spacing="compact">
-              Tu contraseña es correcta, pero aún no tienes segundo factor. Es obligatorio para entrar a la consola.
+              Tu contraseÃ±a es correcta, pero aÃºn no tienes segundo factor. Es obligatorio para entrar a la consola.
             </app-alert>
             <div class="d-flex gap-3">
               <app-button variant="primary" size="lg" class="flex-1" [disabled]="procesando()" (buttonClick)="generar()">
-                {{ procesando() ? 'Generando…' : 'Generar clave' }}
+                {{ procesando() ? 'Generandoâ€¦' : 'Generar clave' }}
               </app-button>
               <app-button type="button" variant="ghost" size="lg" (buttonClick)="volverAlLogin()">Volver</app-button>
             </div>
@@ -58,24 +58,24 @@ import { AuthStore } from '../../../core/auth/auth.store';
 
         @case ('configurando') {
           <ol class="pasos">
-            <li>Abre tu app de autenticación (Microsoft/Google Authenticator, Authy…) y añade una cuenta.</li>
-            <li><strong>Escanea este código QR</strong> — o, si no puedes, ingresa la clave manualmente:</li>
+            <li>Abre tu app de autenticaciÃ³n (Microsoft/Google Authenticator, Authyâ€¦) y aÃ±ade una cuenta.</li>
+            <li><strong>Escanea este cÃ³digo QR</strong> â€” o, si no puedes, ingresa la clave manualmente:</li>
           </ol>
           @if (qrSvg(); as qr) {
-            <div class="qr" role="img" aria-label="Código QR para dar de alta la cuenta en la app de autenticación" [innerHTML]="qr"></div>
+            <div class="qr" role="img" aria-label="CÃ³digo QR para dar de alta la cuenta en la app de autenticaciÃ³n" [innerHTML]="qr"></div>
           }
           <p class="secreto">{{ secret() }}</p>
           <form [formGroup]="form" (ngSubmit)="confirmar()" class="d-flex flex-col gap-4 formulario">
             <app-input
               formControlName="codigo"
-              label="Código de 6 dígitos que muestra la app"
+              label="CÃ³digo de 6 dÃ­gitos que muestra la app"
               placeholder="123456"
               autocomplete="one-time-code"
               [required]="true"
             />
             <div class="d-flex gap-3">
               <app-button type="submit" variant="primary" size="lg" class="flex-1" [disabled]="procesando()">
-                {{ procesando() ? 'Confirmando…' : 'Confirmar y activar' }}
+                {{ procesando() ? 'Confirmandoâ€¦' : 'Confirmar y activar' }}
               </app-button>
               <app-button type="button" variant="ghost" size="lg" [disabled]="procesando()" (buttonClick)="volverAlLogin()">
                 Cancelar
@@ -86,15 +86,15 @@ import { AuthStore } from '../../../core/auth/auth.store';
 
         @case ('codigos') {
           <app-alert kind="warning" spacing="compact">
-            Guarda estos <strong>códigos de recuperación</strong> en un lugar seguro. Cada uno sirve una sola vez
-            si pierdes el acceso a tu app. No se volverán a mostrar.
+            Guarda estos <strong>cÃ³digos de recuperaciÃ³n</strong> en un lugar seguro. Cada uno sirve una sola vez
+            si pierdes el acceso a tu app. No se volverÃ¡n a mostrar.
           </app-alert>
           <ul class="codigos">
             @for (c of recoveryCodes(); track c) {
               <li>{{ c }}</li>
             }
           </ul>
-          <app-button variant="primary" size="lg" (buttonClick)="terminar()">Ya los guardé, ir a iniciar sesión</app-button>
+          <app-button variant="primary" size="lg" (buttonClick)="terminar()">Ya los guardÃ©, ir a iniciar sesiÃ³n</app-button>
         }
       }
     </app-auth-layout>
@@ -109,7 +109,7 @@ import { AuthStore } from '../../../core/auth/auth.store';
       .brand-copy { margin: 0; opacity: 0.85; }
       .pasos { margin: 0 0 var(--space-3); padding-left: 1.2rem; color: var(--text-color-secondary); }
       .qr {
-        /* Fondo claro fijo: un QR sobre fondo oscuro no lo leen todas las cámaras. */
+        /* Fondo claro fijo: un QR sobre fondo oscuro no lo leen todas las cÃ¡maras. */
         width: max-content;
         /* Contraste FISICO de escaneo: el recuadro del QR debe ser claro
            incluso en tema oscuro (como el papel del ticket); no es un color
@@ -184,7 +184,7 @@ export class ActivarMfaComponent {
       next: (r) => {
         this.procesando.set(false);
         if (!r.exito) {
-          this.error.set(r.mensaje ?? 'No se pudo iniciar la configuración.');
+          this.error.set(r.mensaje ?? 'No se pudo iniciar la configuraciÃ³n.');
           return;
         }
         this.secret.set(r.secret ?? '');
@@ -195,14 +195,14 @@ export class ActivarMfaComponent {
       },
       error: () => {
         this.procesando.set(false);
-        this.error.set('No se pudo iniciar la configuración. Vuelve a iniciar sesión e inténtalo de nuevo.');
+        this.error.set('No se pudo iniciar la configuraciÃ³n. Vuelve a iniciar sesiÃ³n e intÃ©ntalo de nuevo.');
       },
     });
   }
 
   protected confirmar(): void {
     if (this.form.invalid) {
-      this.error.set('Ingresa el código que muestra la app.');
+      this.error.set('Ingresa el cÃ³digo que muestra la app.');
       return;
     }
     this.procesando.set(true);
@@ -211,7 +211,7 @@ export class ActivarMfaComponent {
       next: (r) => {
         this.procesando.set(false);
         if (!r.exito) {
-          this.error.set(r.mensaje ?? 'Código inválido.');
+          this.error.set(r.mensaje ?? 'CÃ³digo invÃ¡lido.');
           return;
         }
         this.recoveryCodes.set(r.recoveryCodes ?? []);
@@ -231,8 +231,8 @@ export class ActivarMfaComponent {
       return;
     }
     try {
-      // width explícito: el SVG entra por innerHTML y el CSS encapsulado del
-      // componente no lo alcanza; sin atributos de tamaño no se pintaría.
+      // width explÃ­cito: el SVG entra por innerHTML y el CSS encapsulado del
+      // componente no lo alcanza; sin atributos de tamaÃ±o no se pintarÃ­a.
       const svg = await QRCode.toString(uri, { type: 'svg', margin: 0, width: 208, errorCorrectionLevel: 'M' });
       this.qrSvg.set(this.sanitizer.bypassSecurityTrustHtml(svg));
     } catch {
@@ -240,7 +240,7 @@ export class ActivarMfaComponent {
     }
   }
 
-  /** Enrolado: el token de arranque ya no sirve; se entra de nuevo con usuario, contraseña y código. */
+  /** Enrolado: el token de arranque ya no sirve; se entra de nuevo con usuario, contraseÃ±a y cÃ³digo. */
   protected terminar(): void {
     this.authStore.clearSetupToken();
     void this.router.navigate(['/login']);
@@ -251,3 +251,4 @@ export class ActivarMfaComponent {
     void this.router.navigate(['/login']);
   }
 }
+

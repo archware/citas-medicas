@@ -1,4 +1,4 @@
-import { TestBed } from '@angular/core/testing';
+﻿import { TestBed } from '@angular/core/testing';
 import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { provideZonelessChangeDetection } from '@angular/core';
@@ -15,13 +15,13 @@ interface Priv {
   errorMessage(): string | null;
 }
 
-/** JWT de pruebas (sin firma válida: el front solo decodifica el payload). */
+/** JWT de pruebas (sin firma vÃ¡lida: el front solo decodifica el payload). */
 function jwt(payload: Record<string, unknown>): string {
   const b64 = (s: string) => btoa(s).replace(/=+$/, '').replace(/\+/g, '-').replace(/\//g, '_');
   return `${b64(JSON.stringify({ alg: 'HS256', typ: 'JWT' }))}.${b64(JSON.stringify(payload))}.firma`;
 }
 
-describe('LoginComponent (consola del dueño)', () => {
+describe('LoginComponent (consola del dueÃ±o)', () => {
   let http: HttpTestingController;
   let router: Router;
 
@@ -64,7 +64,7 @@ describe('LoginComponent (consola del dueño)', () => {
     expect(router.navigateByUrl).toHaveBeenCalledWith('/activar-mfa');
   });
 
-  it('con mfaRequired pide el código y lo reenvía con usuario y contraseña', async () => {
+  it('con mfaRequired pide el cÃ³digo y lo reenvÃ­a con usuario y contraseÃ±a', async () => {
     const priv = await montar();
     priv.submitCredentials();
     http.expectOne('/api/v1/plataforma/auth/login').flush({ value: { mfaRequired: true } });
@@ -82,12 +82,13 @@ describe('LoginComponent (consola del dueño)', () => {
     expect(router.navigateByUrl).toHaveBeenCalledWith('/app');
   });
 
-  it('muestra el detailError del backend (credenciales / bloqueo)', async () => {
+  it('muestra el detalleErrorCitaMedica del backend (credenciales / bloqueo)', async () => {
     const priv = await montar();
     priv.submitCredentials();
-    http.expectOne('/api/v1/plataforma/auth/login').flush({ detailError: { errorCode: '03', message: 'Cuenta bloqueada' } });
+    http.expectOne('/api/v1/plataforma/auth/login').flush({ detalleErrorCitaMedica: { errorCode: '03', message: 'Cuenta bloqueada' } });
 
     expect(priv.errorMessage()).toBe('Cuenta bloqueada');
     expect(TestBed.inject(AuthStore).session()).toBeNull();
   });
 });
+

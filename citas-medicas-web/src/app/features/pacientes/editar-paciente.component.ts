@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, effect, inject, input, model, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { PacientesApiService, ActualizarPacienteDto, PacienteResumen } from '../../core/api/pacientes-api.service';
 import { InputComponent, ButtonComponent, FormDialog, FormDialogActions } from '../../shared/ui';
@@ -21,15 +21,15 @@ import { InputComponent, ButtonComponent, FormDialog, FormDialogActions } from '
         <app-input type="date" label="Fecha de Nacimiento" [(ngModel)]="form.fechaNacimientoLocal" name="fechaNacimiento"></app-input>
 
         <div class="form-group" style="margin-bottom: 16px;">
-          <label class="form-label">Género</label>
+          <label class="form-label">GÃ©nero</label>
           <select class="form-input" [(ngModel)]="form.genero" name="genero">
             <option value="M">Masculino</option>
             <option value="F">Femenino</option>
           </select>
         </div>
 
-        <app-input type="text" label="Dirección" [(ngModel)]="form.direccion" name="direccion"></app-input>
-        <app-input type="tel" label="Teléfono" [(ngModel)]="form.telefono" name="telefono"></app-input>
+        <app-input type="text" label="DirecciÃ³n" [(ngModel)]="form.direccion" name="direccion"></app-input>
+        <app-input type="tel" label="TelÃ©fono" [(ngModel)]="form.telefono" name="telefono"></app-input>
         <app-input type="email" label="Correo" [(ngModel)]="form.correo" name="correo"></app-input>
 
         @if (error()) { <p class="error" style="color: var(--danger-color)">{{ error() }}</p> }
@@ -99,7 +99,7 @@ export class EditarPacienteComponent {
         this.actualizado.emit();
       },
       error: (err: any) => { 
-        const msg = err.error?.detailError || err.error?.title || 'Error al actualizar.';
+        const msg = err.error?.detalleErrorCitaMedica || err.error?.title || 'Error al actualizar.';
         this.error.set(msg); 
         this.enviando.set(false); 
       },
@@ -110,3 +110,4 @@ export class EditarPacienteComponent {
     this.opened.set(false);
   }
 }
+

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { SlicePipe } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { HttpClient, HttpContext } from '@angular/common/http';
@@ -14,8 +14,8 @@ import type { Perfil } from '../../core/auth/auth.models';
 
 /**
  * Seguridad de la cuenta de plataforma: perfil y estado del segundo factor. El MFA
- * es OBLIGATORIO, así que aquí no se "activa" (eso ocurre en el login): solo se puede
- * DESACTIVAR con un código válido para cambiar de app autenticadora — la sesión se
+ * es OBLIGATORIO, asÃ­ que aquÃ­ no se "activa" (eso ocurre en el login): solo se puede
+ * DESACTIVAR con un cÃ³digo vÃ¡lido para cambiar de app autenticadora â€” la sesiÃ³n se
  * cierra y el siguiente login vuelve a exigir el enrolamiento.
  */
 @Component({
@@ -35,10 +35,10 @@ import type { Perfil } from '../../core/auth/auth.models';
           <dt>Usuario</dt><dd>{{ p.username }}</dd>
           <dt>Estado</dt><dd>{{ p.estado }}</dd>
           <dt>Segundo factor</dt><dd>{{ p.mfaHabilitado ? 'Activo' : 'Pendiente' }}</dd>
-          <dt>Último acceso</dt><dd>{{ p.ultimoLoginUtc ? (p.ultimoLoginUtc | slice: 0 : 16) : '—' }}</dd>
+          <dt>Ãšltimo acceso</dt><dd>{{ p.ultimoLoginUtc ? (p.ultimoLoginUtc | slice: 0 : 16) : 'â€”' }}</dd>
         </dl>
       } @else {
-        <p>Cargando…</p>
+        <p>Cargandoâ€¦</p>
       }
     </app-card>
 
@@ -49,24 +49,24 @@ import type { Perfil } from '../../core/auth/auth.models';
 
       @if (habilitado()) {
         <app-alert kind="success" spacing="compact">
-          El segundo factor está <strong>activo</strong>. Para cambiar de app autenticadora, desactívalo con un
-          código válido: se cerrará la sesión y al volver a entrar lo activarás de nuevo.
+          El segundo factor estÃ¡ <strong>activo</strong>. Para cambiar de app autenticadora, desactÃ­valo con un
+          cÃ³digo vÃ¡lido: se cerrarÃ¡ la sesiÃ³n y al volver a entrar lo activarÃ¡s de nuevo.
         </app-alert>
         <form [formGroup]="form" (ngSubmit)="desactivar()" class="d-flex flex-col gap-4 formulario">
           <app-input
             formControlName="codigo"
-            label="Código para desactivar"
-            placeholder="123456 o código de recuperación"
+            label="CÃ³digo para desactivar"
+            placeholder="123456 o cÃ³digo de recuperaciÃ³n"
             autocomplete="one-time-code"
             [required]="true"
           />
           <app-button type="submit" variant="ghost" size="lg" [disabled]="procesando()">
-            {{ procesando() ? 'Desactivando…' : 'Desactivar y volver a enrolar' }}
+            {{ procesando() ? 'Desactivandoâ€¦' : 'Desactivar y volver a enrolar' }}
           </app-button>
         </form>
       } @else {
         <app-alert kind="warning" spacing="compact">
-          El segundo factor está pendiente: se activa al iniciar sesión.
+          El segundo factor estÃ¡ pendiente: se activa al iniciar sesiÃ³n.
         </app-alert>
       }
     </app-card>
@@ -115,7 +115,7 @@ export class SeguridadMfaComponent {
 
   protected desactivar(): void {
     if (this.form.invalid) {
-      this.error.set('Ingresa un código para desactivar.');
+      this.error.set('Ingresa un cÃ³digo para desactivar.');
       return;
     }
     this.procesando.set(true);
@@ -125,9 +125,9 @@ export class SeguridadMfaComponent {
       .post<unknown>(apiUrl('/api/v1/plataforma/auth/mfa/disable'), { code: this.form.controls.codigo.value.trim() }, { context })
       .pipe(
         map((r) => {
-          const raw = (r ?? {}) as { detailError?: { message: string }; value?: string };
-          return raw.detailError
-            ? { exito: false, mensaje: raw.detailError.message }
+          const raw = (r ?? {}) as { detalleErrorCitaMedica?: { message: string }; value?: string };
+          return raw.detalleErrorCitaMedica
+            ? { exito: false, mensaje: raw.detalleErrorCitaMedica.message }
             : { exito: true, mensaje: typeof raw.value === 'string' ? raw.value : 'Segundo factor desactivado.' };
         }),
       )
@@ -139,7 +139,7 @@ export class SeguridadMfaComponent {
             return;
           }
           this.toast.success(r.mensaje);
-          // Sin segundo factor no hay consola: se cierra la sesión y el login exigirá enrolarlo.
+          // Sin segundo factor no hay consola: se cierra la sesiÃ³n y el login exigirÃ¡ enrolarlo.
           const acceso = this.authStore.token();
           const refresh = this.authStore.refreshToken();
           this.authStore.logout();
@@ -153,3 +153,4 @@ export class SeguridadMfaComponent {
       });
   }
 }
+

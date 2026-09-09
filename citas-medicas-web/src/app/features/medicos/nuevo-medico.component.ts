@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, model, output, signal } from '@angular/core';
+﻿import { ChangeDetectionStrategy, Component, inject, model, output, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MedicosApiService, RegistrarMedicoDto } from '../../core/api/medicos-api.service';
 import { InputComponent, ButtonComponent, FormDialog, FormDialogActions } from '../../shared/ui';
@@ -42,9 +42,10 @@ export class NuevoMedicoComponent {
     const dto: RegistrarMedicoDto = { ...this.form };
     this.api.registrar(dto).subscribe({
       next: () => { this.enviando.set(false); this.opened.set(false); this.registrado.emit(); },
-      error: (err: any) => { this.error.set(err.error?.detailError || err.error?.title || 'Error al registrar.'); this.enviando.set(false); }
+      error: (err: any) => { this.error.set(err.error?.detalleErrorCitaMedica || err.error?.title || 'Error al registrar.'); this.enviando.set(false); }
     });
   }
 
   cancelar(): void { this.opened.set(false); }
 }
+
